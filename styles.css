@@ -8,7 +8,7 @@
     /* ── PP Mondwest ───────────────────────────────── */
     @font-face {
       font-family: 'PPMondwest';
-      src: url('PPMondwest-Regular.otf') format('opentype');
+      src: url('Typefaces/PPMondwest-Regular.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
     }
