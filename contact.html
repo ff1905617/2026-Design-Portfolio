@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FRANCIS FITZGERALD — Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+  <style>
+
+    .contact-page {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      padding-top: 100px;
+      padding-bottom: 120px;
+      background: #000;
+    }
+
+    /* ── Intro block ────────────────────────────────── */
+    .contact-intro {
+      padding: 56px 48px 40px 48px;
+      opacity: 0;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+    }
+
+    .contact-subtext {
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.05em;
+      line-height: 1.7;
+      margin-top: 24px;
+      max-width: 480px;
+    }
+
+    /* ── Divider ─────────────────────────────────────── */
+    .contact-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0 48px;
+    }
+
+    /* ── Form block ──────────────────────────────────── */
+    .contact-form-wrap {
+      padding: 48px 48px 0 48px;
+      opacity: 0;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
+      max-width: 640px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 0;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+
+    .form-field label {
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 10px;
+    }
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.45);
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      padding: 10px 0;
+      outline: none;
+      transition: border-color 0.25s ease;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: rgba(255,255,255,0.18);
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
+      border-bottom-color: rgba(255,255,255,0.6);
+    }
+
+    .form-field textarea {
+      resize: none;
+      height: 120px;
+      line-height: 1.7;
+    }
+
+    .form-field select {
+      color: rgba(255,255,255,0.18);
+      cursor: pointer;
+    }
+
+    .form-field select option {
+      background: #111;
+      color: #fff;
+    }
+
+    .form-field select.has-value {
+      color: #fff;
+    }
+
+    /* Submit button — matches .home-cta */
+    .form-submit {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 500, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #fff;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.75);
+      padding: 11px 28px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 200, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Animation ──────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ─────────────────────────────────── */
+    @media (max-width: 768px) {
+      .contact-intro     { padding: 40px 24px 32px 24px; }
+      .contact-divider   { margin: 0 24px; }
+      .contact-form-wrap { padding: 40px 24px 0 24px; max-width: 100%; }
+      .contact-subtext   { max-width: 100%; }
+      .form-row          { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <main class="contact-page">
+
+    <!-- Intro -->
+    <div class="contact-intro">
+      <h2 class="home-name">Let's Connect</h2>
+      <p class="contact-subtext">Open to full-time roles, contract work, passion projects and everything in between. Feel free to reach out.</p>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form-wrap">
+      <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" autocomplete="off">
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="subject" id="subject" placeholder="Subject" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What can I help you with?"></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Send Message</button>
+          <span class="form-success" id="successMsg">Message sent — Expect a response in 1-2 business days.</span>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.querySelector('.btn-submit');
+      const msg = document.getElementById('successMsg');
+      btn.style.opacity = '0.4';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.style.display = 'none';
+        msg.style.display = 'block';
+      }, 600);
+    }
+  </script>
+
+  <script src="nav.js"></script>
+</body>
+</html>

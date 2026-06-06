@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FRANCIS FITZGERALD — WORK</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Top nav (identical to homepage) -->
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <!-- Work page body -->
+  <main class="work-page">
+    <div class="work-header">
+      <h1>MY WORK</h1>
+    </div>
+    <hr class="divider">
+
+    <div class="work-grid">
+
+      <!-- Card 1 — with image -->
+      <div class="card" onclick="location.href='01.html'">
+        <div class="card-image">
+          <img src="artwork/HELLBROOK/HELL_01.jpg" alt="Hellbrook Brewing Co."
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Hellbrook Brewing Co.</span>
+          <span class="card-meta">2025</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" onclick="location.href='02.html'">
+        <div class="card-image">
+          <img src="artwork/SPOTIFY SCOPES/SCOPES_01.jpg" alt="Spotify Scopes"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Spotify Scopes</span>
+          <span class="card-meta">2026</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="artwork/ODDGREDIENTS/ODD_01.jpg" alt="Project Three"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Oddgredients</span>
+          <span class="card-meta">UNDER CONSTRUCTION</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="artwork/SKOROCHOD/SKO_01.jpg" alt="Skorochod Ukrainian Buffet"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Skorochod Ukrainian Buffet</span>
+          <span class="card-meta">UNDER CONSTRUCTION</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="artwork/HOME SOWN/HOME_01.jpg" alt="Home Sown Hydroponics"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Home Sown Hydroponics</span>
+          <span class="card-meta">UNDER CONSTRUCTION</span>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Scopes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+</head>
+<body>
+
+  <!-- Noise overlay -->
+
+  <!-- Top nav (identical to homepage) -->
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <main class="project-page">
+
+   <!-- Back to work -->
+    <a class="back-link" href="work.html">
+      <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+      All Work
+    </a>
+
+    <!-- Header -->
+    <header class="project-header">
+      <div class="project-header-left">
+        <p class="project-category">UI/UX</p>
+        <h1 class="project-title">Spotify Scopes</h1>
+      </div>
+      <div class="project-header-right">
+        <p class="project-meta-item">Year <span>2026</span></p>
+        <p class="project-meta-item">Role <span>UI/UX Designer, Developer</span></p>
+      </div>
+    </header>
+
+    <hr class="project-divider">
+
+    <!-- Hero image -->
+    <div class="project-hero">
+            <img src="artwork/SPOTIFY SCOPES/SCOPES_01.jpg">
+    </div>
+
+    <!-- Description + sidebar -->
+    <div class="project-body">
+      <div class="project-description">
+        <p>Spotify Scopes is a hypothetical feature for Spotify that allows users to create and share audio visualizers
+          to play along with their favorite music. The feature centers around the "Creator Studio," where the user can adjust
+          different parameters such as color, shape and beat sensitivity to create their own audio-visual experience.
+        </p>
+      </div>
+        
+      <aside class="project-sidebar">
+        <div>
+          <p class="sidebar-block-label">Disciplines</p>
+          <p class="sidebar-block-value">UI/UX<br>Creative Coding</p>
+        </div>
+        <div>
+          <p class="sidebar-block-label">Tools</p>
+          <p class="sidebar-block-value">Figma<br>HTML<br>CSS<br>Javascript</p>
+        </div>
+      </aside>
+    </div>
+    </div>
+
+
+  <div class="video-grid">
+
+  <div class="grid-item-thirds">
+  <p>Create your audio visualizer.</p>
+    <div class="video-frame">
+      
+      <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto">
+        <source src="artwork/SPOTIFY SCOPES/SCOPES_02.mov" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="grid-item-thirds">
+    <p>Save and publish your visualizer.</p>
+    <div class="video-frame">
+      
+      <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto">
+        <source src="artwork/SPOTIFY SCOPES/SCOPES_03.mov" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="grid-item-thirds">
+    <p>Play your visualizer and screencast.</p>
+    <div class="video-frame">
+      
+      <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto">
+        <source src="artwork/SPOTIFY SCOPES/SCOPES_04.mov" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="project-video">
+      <video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+  class="hero-video"
+>
+  <source src="artwork/SPOTIFY SCOPES/SCOPES_01.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+           onerror="this.parentElement.innerHTML='<div class=\'project-hero-placeholder\'><span class=\'hero-placeholder-label\'>Hero Image</span></div>'">
+</div>
+
+
+    <!-- Additional images -->
+    <!--<div class="project-images">
+      <div class="project-img-block">
+        <img src="project-detail-1.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="project-detail-2.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="project-detail-3.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="project-detail-4.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+    </div>-->
+
+    <!-- Next project -->
+    <a class="next-project" href="">
+      <div>
+        <p class="next-label">This page is currently under construction</p>
+        <p class="next-title">Oddgredients</p>
+      </div>
+      <div class="next-arrow">
+        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+      </div>
+    </a>
+
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>

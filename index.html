@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FRANCIS FITZGERALD</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- Grid lines -->
+  <div class="home-grid-lines" aria-hidden="true">
+    <div class="hgl-h hgl-h--top"></div>
+    <div class="hgl-h hgl-h--bottom"></div>
+    <div class="hgl-v"></div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <!-- Axis readouts -->
+  <div class="home-readout" id="readoutY">Y: 0%</div>
+  <div class="home-readout" id="readoutX">X: 0%</div>
+
+  <!-- Hero -->
+  <main class="home-page">
+    <div class="home-hero">
+      <p class="home-label">Hello, my name is</p>
+      <h1 class="home-name">Francis Fitzgerald</h1>
+      <p class="home-sub">Designer, coder and <br> multidisciplinary creative.</p>
+      <button class="home-cta" onclick="location.href='work.html'">MY WORK</button>
+    </div>
+  </main>
+
+  <!-- Mobile-only work section -->
+  <section class="home-work">
+    <p class="home-label">My Work</p>
+    <div class="work-grid">
+
+      <div class="card" onclick="location.href='01.html'">
+        <div class="card-image">
+          <img src="artwork/HELLBROOK/HELL_01.jpg" alt="Hellbrook Brewing Co."
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Hellbrook Brewing Co.</span>
+          <span class="card-meta">2025</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="location.href='02.html'">
+        <div class="card-image">
+          <img src="artwork/SPOTIFY SCOPES/SCOPES_01.jpg" alt="Spotify Scopes"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Spotify Scopes</span>
+          <span class="card-meta">2026</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="location.href='03.html'">
+        <div class="card-image">
+          <img src="artwork/ODDGREDIENTS/ODD_01.jpg" alt="Oddgredients"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Oddgredients</span>
+          <span class="card-meta">2026</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="location.href='04.html'">
+        <div class="card-image">
+          <img src="artwork/SKOROCHOD/SKO_01.jpg" alt="Skorochod Ukrainian Buffet"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Skorochod Ukrainian Buffet</span>
+          <span class="card-meta">2025</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="location.href='05.html'">
+        <div class="card-image">
+          <img src="project-5.jpg" alt="Home Sown Hydroponics"
+               onerror="this.parentElement.innerHTML='<div class=\'card-image-placeholder\'><span class=\'placeholder-label\'>Image</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-arrow">
+            <svg viewBox="0 0 12 12"><line x1="2" y1="10" x2="10" y2="2"/><polyline points="4,2 10,2 10,8"/></svg>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-title">Home Sown Hydroponics</span>
+          <span class="card-meta">2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    const PAD       = 24;
+    const MOBILE_BP = 768;
+
+    const hero       = document.querySelector('.home-hero');
+    const lineT      = document.querySelector('.hgl-h--top');
+    const lineB      = document.querySelector('.hgl-h--bottom');
+    const lineV      = document.querySelector('.hgl-v');
+    const readoutY   = document.getElementById('readoutY');
+    const readoutX   = document.getElementById('readoutX');
+
+
+    let topY, bottomY, rightX, lPad; // current line positions + left edge
+    let natW, natH;                   // hero's natural (unscaled) dimensions
+    let drag = null;              // 'top' | 'bottom' | 'right'
+    let startCoord, startLineVal;
+
+    // ── Position the three rules + readout labels ─
+    function setLines() {
+      lineT.style.top  = topY    + 'px';
+      lineB.style.top  = bottomY + 'px';
+      lineV.style.left = rightX  + 'px';
+
+      // Y label sits just above the top rule; X label just below it
+      // Both are 14px to the right of the vertical rule
+      readoutY.style.top  = (topY - 26) + 'px';
+      readoutY.style.left = (rightX + 14) + 'px';
+      readoutX.style.top  = (topY + 8)   + 'px';
+      readoutX.style.left = (rightX + 14) + 'px';
+    }
+
+    // ── Scale hero to fill the bounding box ───────
+    // Content zone: (lPad, topY+PAD) → (rightX-PAD, bottomY-PAD)
+    function applyHero() {
+      const contentW = (rightX  - PAD) - lPad;
+      const contentH = (bottomY - PAD) - (topY + PAD);
+      const sx = Math.max(0.05, contentW / natW);
+      const sy = Math.max(0.05, contentH / natH);
+
+      hero.style.top       = (topY + PAD) + 'px';
+      hero.style.transform = 'scale(' + sx + ',' + sy + ')';
+
+      // Update percentage readouts (0% = natural scale)
+      readoutX.textContent = 'X: ' + Math.round((sx - 1) * 100) + '%';
+      readoutY.textContent = 'Y: ' + Math.round((sy - 1) * 100) + '%';
+    }
+
+    // ── Measure natural size, pin hero, set lines ─
+    function init() {
+      // On mobile: reset any desktop state and leave hero in normal flow
+      if (window.innerWidth <= MOBILE_BP) {
+        hero.style.transform = 'none';
+        hero.style.position  = '';
+        hero.style.top       = '';
+        hero.style.left      = '';
+        return;
+      }
+
+      hero.style.transform = 'none';
+      hero.style.position  = '';
+      hero.style.top       = '';
+      hero.style.left      = '';
+
+      void hero.offsetHeight; // flush layout
+
+      const r = hero.getBoundingClientRect();
+      natW    = r.width;
+      natH    = r.height;
+      lPad    = r.left;           // honour CSS margin (48px desktop, 24px mobile)
+      topY    = r.top    - PAD;
+      bottomY = r.bottom + PAD;
+      rightX  = r.right  + PAD;
+
+      hero.style.position        = 'fixed';
+      hero.style.left            = lPad + 'px';
+      hero.style.transformOrigin = 'top left';
+      hero.style.zIndex          = '2';
+
+      applyHero();
+      setLines();
+    }
+
+    // ── Drag helpers ──────────────────────────────
+    function beginDrag(which, coord) {
+      drag         = which;
+      startCoord   = coord;
+      startLineVal = which === 'top' ? topY : which === 'bottom' ? bottomY : rightX;
+      document.body.style.userSelect = 'none';
+      document.body.style.cursor     = which === 'right' ? 'ew-resize' : 'ns-resize';
+    }
+
+    function moveDrag(x, y) {
+      if (!drag) return;
+      const delta = drag === 'right' ? x - startCoord : y - startCoord;
+      const next  = startLineVal + delta;
+
+      if      (drag === 'top')    topY    = Math.min(next, bottomY - PAD * 6);
+      else if (drag === 'bottom') bottomY = Math.max(next, topY    + PAD * 6);
+      else                         rightX  = Math.max(next, lPad + 60);
+
+      setLines();
+      applyHero();
+    }
+
+    function endDrag() {
+      drag = null;
+      document.body.style.userSelect = '';
+      document.body.style.cursor     = '';
+    }
+
+    // Mouse
+    lineT.addEventListener('mousedown',  e => { beginDrag('top',    e.clientY); e.preventDefault(); });
+    lineB.addEventListener('mousedown',  e => { beginDrag('bottom', e.clientY); e.preventDefault(); });
+    lineV.addEventListener('mousedown',  e => { beginDrag('right',  e.clientX); e.preventDefault(); });
+    window.addEventListener('mousemove', e => moveDrag(e.clientX, e.clientY));
+    window.addEventListener('mouseup',   endDrag);
+
+    // Touch
+    lineT.addEventListener('touchstart', e => { beginDrag('top',    e.touches[0].clientY); e.preventDefault(); }, { passive: false });
+    lineB.addEventListener('touchstart', e => { beginDrag('bottom', e.touches[0].clientY); e.preventDefault(); }, { passive: false });
+    lineV.addEventListener('touchstart', e => { beginDrag('right',  e.touches[0].clientX); e.preventDefault(); }, { passive: false });
+    window.addEventListener('touchmove', e => { if (drag) { moveDrag(e.touches[0].clientX, e.touches[0].clientY); e.preventDefault(); } }, { passive: false });
+    window.addEventListener('touchend',  endDrag);
+
+    document.fonts.ready.then(() => {
+      init();
+      window.addEventListener('resize', init);
+    });
+  })();
+  </script>
+  <script src="nav.js"></script>
+</body>
+</html>

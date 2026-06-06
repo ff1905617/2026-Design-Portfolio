@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Hellbrook Brewing Co.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- Top nav (identical to homepage) -->
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <main class="project-page">
+
+    <!-- Back to work -->
+    <a class="back-link" href="work.html">
+      <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+      All Work
+    </a>
+
+    <!-- Header -->
+    <header class="project-header">
+      <div class="project-header-left">
+        <h1 class="project-title">Hellbrook Brewing Co.</h1>
+      </div>
+      <div class="project-header-right">
+        <p class="project-meta-item">Year <span>2025</span></p>
+        <p class="project-meta-item">Role <span>Brand Strategist/Designer</span></p>
+      </div>
+    </header>
+
+    <hr class="project-divider">
+
+    <!-- Hero image -->
+    <div class="project-hero">
+      <img src="artwork/HELLBROOK/HELL_01.jpg">
+    </div>
+
+    <!-- Description + sidebar -->
+    <div class="project-body">
+      <div class="project-description">
+        <h2 class="subheading">Hellbrook Brewing Co.</h2>
+        <p>Hellbrook Brewing Co. is a craft beer brewery based in Burlington, VT. It's named after the steepest, most treacherous trail up Mt. Mansfield, the highest peak in the state. Hellbrook is made for Adrenaline Junkies, Acid Burnouts and Backwoods Creeps — really anyone seeking thrills in the outdoors. Our brand essence is "summit freak" because Hellbrook is a "summit beer," a cool, refreshing reward meant to be enjoyed at the top of a mountain.</p>
+      </div>
+      <aside class="project-sidebar">
+        <div>
+          <p class="sidebar-block-label">Disciplines</p>
+          <p class="sidebar-block-value">Brand Identity<br>Art Direction</p>
+        </div>
+        <div>
+          <p class="sidebar-block-label">Tools</p>
+          <p class="sidebar-block-value">Analog Illustration<br>Illustrator<br>Artlist<br></p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Additional images -->
+    <div class="project-images">
+      <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_02.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_03.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_04.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+      <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_05.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+            <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_06.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                  <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_07.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                        <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_08.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                              <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_09.jpg" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+  </div>
+
+<div class="project-video">
+      <video
+  id="beerVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+  class="hero-video">
+  <source src="artwork/HELLBROOK/HELL_14.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="project-body">
+  <div class="project-description">
+    <h2 class="subheading">Hellbrook Brewing Co. Patches</h2>
+    <p>Because Hellbrook Brewing Co. is a hiking-centric brand, a series of patches only makes sense. Each patch sports one of Hellbrook's 3 flavors as well as a circular stamp.</p>
+  </div>
+</div>
+
+  <div class="project-images">
+                              <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_10.png" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                                    <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_11.png" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                                    <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_12.png" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+                                    <div class="project-img-block">
+        <img src="artwork/HELLBROOK/HELL_13.png" alt="Project detail"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
+      </div>
+    </div>
+
+      <div class="slideshow-section">
+    <h2 class="slideshow-heading">Logos &amp; Typography</h2>
+    <div class="slideshow" id="hellSlideshow">
+      <div class="slideshow-track" id="hellTrack">
+        <img src="artwork/HELLBROOK/HELL_15.jpg" alt="Logos & Typography 1">
+        <img src="artwork/HELLBROOK/HELL_16.jpg" alt="Logos & Typography 2">
+        <img src="artwork/HELLBROOK/HELL_17.jpg" alt="Logos & Typography 3">
+        <img src="artwork/HELLBROOK/HELL_18.jpg" alt="Logos & Typography 4">
+        <img src="artwork/HELLBROOK/HELL_19.jpg" alt="Logos & Typography 5">
+      </div>
+      <button class="slideshow-btn slideshow-btn--prev" onclick="hellSlide(-1)" aria-label="Previous">
+        <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+      </button>
+      <button class="slideshow-btn slideshow-btn--next" onclick="hellSlide(1)" aria-label="Next">
+        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+      </button>
+      <div class="slideshow-dots" id="hellDots"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const track = document.getElementById('hellTrack');
+      const dots  = document.getElementById('hellDots');
+      const total = track.children.length;
+      let current = 0;
+
+      // Build dots
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dots.appendChild(d);
+      }
+
+      function goTo(n) {
+        current = (n + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        Array.from(dots.children).forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      window.hellSlide = (dir) => goTo(current + dir);
+
+      // Touch / swipe
+      let startX = 0;
+      track.parentElement.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      track.parentElement.addEventListener('touchend',   e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+      });
+
+      goTo(0);
+    })();
+  </script>
+
+
+
+    <!-- Next project -->
+    <a class="next-project" href="02.html">
+      <div>
+        <p class="next-label">Next Project</p>
+        <p class="next-title">Spotify Scopes</p>
+      </div>
+      <div class="next-arrow">
+        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+      </div>
+    </a>
+
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>
