@@ -52,7 +52,6 @@
     <!-- Header -->
     <header class="project-header">
       <div class="project-header-left">
-        <p class="project-category">UI/UX</p>
         <h1 class="project-title">Spotify Scopes</h1>
       </div>
       <div class="project-header-right">
@@ -88,72 +87,223 @@
         </div>
       </aside>
     </div>
-    </div>
 
+    <!-- Demonstration -->
+    <section class="demonstration-section">
+      <p class="demonstration-label">Demonstration</p>
+      <div class="project-video">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          class="hero-video">
+          <source src="artwork/SPOTIFY SCOPES/SCOPES_01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
 
-  <div class="video-grid">
+    <!-- Key Features -->
+    <section class="features-section">
+      <p class="features-label">Key Features</p>
+      <div class="video-grid">
 
-  <div class="grid-item-thirds">
-  <p>Create your audio visualizer.</p>
-    <div class="video-frame">
-      
-      <video 
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-        <source src="artwork/SPOTIFY SCOPES/SCOPES_02.mov" type="video/mp4">
-      </video>
-    </div>
-  </div>
+        <div class="grid-item-thirds">
+          <p>Create your audio visualizer.</p>
+          <div class="video-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="artwork/SPOTIFY SCOPES/SCOPES_02.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
 
-  <div class="grid-item-thirds">
-    <p>Save and publish your visualizer.</p>
-    <div class="video-frame">
-      
-      <video 
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-        <source src="artwork/SPOTIFY SCOPES/SCOPES_03.mov" type="video/mp4">
-      </video>
-    </div>
-  </div>
+        <div class="grid-item-thirds">
+          <p>Save and publish your visualizer.</p>
+          <div class="video-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="artwork/SPOTIFY SCOPES/SCOPES_03.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
 
-  <div class="grid-item-thirds">
-    <p>Play your visualizer and screencast.</p>
-    <div class="video-frame">
-      
-      <video 
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-        <source src="artwork/SPOTIFY SCOPES/SCOPES_04.mov" type="video/mp4">
-      </video>
-    </div>
-  </div>
+        <div class="grid-item-thirds">
+          <p>Play your visualizer and screencast.</p>
+          <div class="video-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="artwork/SPOTIFY SCOPES/SCOPES_04.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
 
-  </div>
+      </div>
+    </section>
 
-  <div class="project-video">
-      <video
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="hero-video"
->
-  <source src="artwork/SPOTIFY SCOPES/SCOPES_01.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-           onerror="this.parentElement.innerHTML='<div class=\'project-hero-placeholder\'><span class=\'hero-placeholder-label\'>Hero Image</span></div>'">
-</div>
+    <!-- Web Audio API -->
+    <section class="webaudio-section">
+      <p class="webaudio-label">Web Audio API</p>
+      <p class="bodycopy">To prototype the audio-reactive behavior behind Spotify Scopes, I built a functioning visualizer using the Web Audio API. It analyzes live audio in the browser and translates frequency and amplitude data into the shape, color and motion parameters explored in the Creator Studio. Interact with the live build below.</p>
+      <div class="webaudio-frame-wrap">
+        <iframe
+          class="webaudio-frame"
+          src="https://ff1905617.github.io/audioviz/"
+          title="Spotify Scopes Web Audio API prototype"
+          loading="lazy"
+          allow="autoplay; microphone"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="research-section">
+      <p class="research-label">Research</p>
+
+      <!-- User Personas -->
+      <div class="personas-section">
+        <p class="personas-heading">User Personas</p>
+        <div class="personas-grid">
+          <div class="persona-card">
+            <img class="persona-photo" src="images/SCOPES_persona_01.png" alt="Harold, 29, Electrician">
+            <div class="persona-info">
+              <p class="persona-name">Harold, 29 &mdash; Electrician</p>
+              <p class="persona-desc">
+                Harold is a 29 year old electrician.<br>
+                He works hard during the week and gets together with his friends on the weekend for wings and beer.<br>
+                They take turns connecting Harold&rsquo;s smart TV, playing music and music videos.<br>
+                This weekend get-together has been a tradition for Harold and his friends for many years.
+              </p>
+            </div>
+          </div>
+          <div class="persona-card">
+            <img class="persona-photo" src="images/SCOPES_persona_02.png" alt="Pete, 24, Underground DJ">
+            <div class="persona-info">
+              <p class="persona-name">Pete, 24 &mdash; Underground DJ</p>
+              <p class="persona-desc">
+                Pete is a 24 year old night club bouncer and underground DJ.<br>
+                He works from 5:00pm to 1:00am at the night club and carts his sound equipment to basement parties afterwards.<br>
+                He is relatively new to DJ-ing and doesn&rsquo;t have top of the line equipment.<br>
+                He is interested in learning how to use generative art for visuals during his DJ sets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Negative Flows -->
+      <div class="flow-section">
+        <p class="flow-heading">Current Negative Flows</p>
+        <div class="flow-grid">
+          <div class="flow-card">
+            <p class="flow-user">Harold</p>
+            <ol class="flow-steps">
+              <li>Harold and his friends are watching music videos and socializing but are starting to get bored of watching the same videos.</li>
+              <li>While they enjoy each other&rsquo;s company, they want to find something new to do together.</li>
+              <li>The group is already tired from the work week.</li>
+              <li>Some of Harold&rsquo;s friends start scrolling on their phones.</li>
+            </ol>
+            <div class="pain-points">
+              <p class="pain-points-label">Pain Points</p>
+              <ul class="pain-points-list">
+                <li>Harold and his friends are bored of watching the same videos.</li>
+                <li>They are already tired from the week and are starting to get sleepy.</li>
+                <li>They want something new to do together.</li>
+                <li>They start looking for mindless stimulation on their phones.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flow-card">
+            <p class="flow-user">Pete</p>
+            <ol class="flow-steps">
+              <li>Pete is looking for different ways to improve his DJ set in terms of visuals. He currently has an old strobe light and an overhead projector.</li>
+              <li>He has been researching different ways to incorporate visuals into his set and has discovered generative art.</li>
+              <li>In order to make generative art, he has to learn how to code. With his work schedule as a bouncer, it&rsquo;s hard for him to find time to sit down and teach himself.</li>
+              <li>Pete usually ends up sticking to what he already has and doesn&rsquo;t branch out.</li>
+            </ol>
+            <div class="pain-points">
+              <p class="pain-points-label">Pain Points</p>
+              <ul class="pain-points-list">
+                <li>Pete&rsquo;s equipment is limited.</li>
+                <li>He wants to learn how to make generative art but doesn&rsquo;t know how to code.</li>
+                <li>Pete can&rsquo;t spend money on expensive softwares or classes.</li>
+                <li>His sets are limited in terms of visuals.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Happy Path -->
+      <div class="happy-path-section">
+        <p class="happy-path-section-heading">Happy Path</p>
+
+        <div class="happy-path">
+          <p class="happy-path-label">Harold</p>
+          <div class="happy-path-steps happy-path-steps--4">
+            <div class="happy-path-step">
+              <p class="step-number">01</p>
+              <p class="step-title">Discover Spotify Scopes</p>
+              <p class="step-desc">Harold discovers Spotify Scopes through social media and decides to try it out at his next weekend get-together.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">02</p>
+              <p class="step-title">Connect &amp; Open</p>
+              <p class="step-desc">When the energy starts to dwindle, Harold connects his phone to the TV, opening Spotify Scopes.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">03</p>
+              <p class="step-title">Browse Visualizers</p>
+              <p class="step-desc">The group is intrigued by the selection of visuals and starts requesting music to play along with them.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">04</p>
+              <p class="step-title">Experiment Together</p>
+              <p class="step-desc">For the rest of the night, Harold and his friends are experimenting with different visualizers and having fun.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="happy-path">
+          <p class="happy-path-label">Pete</p>
+          <div class="happy-path-steps happy-path-steps--4">
+            <div class="happy-path-step">
+              <p class="step-number">01</p>
+              <p class="step-title">Discover Spotify Scopes</p>
+              <p class="step-desc">While researching generative art, Pete discovers Spotify Scopes.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">02</p>
+              <p class="step-title">Open Creator Studio</p>
+              <p class="step-desc">He decides to try it out. Pete opens the creator studio and begins to mess around with it.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">03</p>
+              <p class="step-title">Create Visualizers</p>
+              <p class="step-desc">He creates a couple visualizers and decides that he will use them in his next DJ set along with his projector.</p>
+            </div>
+            <div class="happy-path-step">
+              <p class="step-number">04</p>
+              <p class="step-title">Build His Set</p>
+              <p class="step-desc">Pete creates four different visualizers for different parts of his set to use at his next gig.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sketches & Wireframes -->
+    <section class="sketches-section">
+      <p class="sketches-heading">Sketches &amp; Wireframes</p>
+
+      <div class="wireframes-block">
+        <img src="artwork/SPOTIFY SCOPES/SCOPES_06.png" alt="Spotify Scopes wireframe 6">
+      </div>
+
+      <div class="wireframes-block">
+        <img src="artwork/SPOTIFY SCOPES/SCOPES_05.png" alt="Spotify Scopes wireframe 5">
+      </div>
+    </section>
 
 
     <!-- Additional images -->
@@ -177,9 +327,9 @@
     </div>-->
 
     <!-- Next project -->
-    <a class="next-project" href="">
+    <a class="next-project" href="03.html">
       <div>
-        <p class="next-label">This page is currently under construction</p>
+        <p class="next-label">Next Project</p>
         <p class="next-title">Oddgredients</p>
       </div>
       <div class="next-arrow">
