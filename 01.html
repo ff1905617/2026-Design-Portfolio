@@ -65,7 +65,7 @@
 
     <!-- Hero image -->
     <div class="project-hero">
-      <img src="artwork/HELLBROOK/HELL_01.jpg">
+      <img src="artwork/HELLBROOK/HELL_01.webp">
     </div>
 
     <!-- Description + sidebar -->
@@ -89,35 +89,35 @@
     <!-- Additional images -->
     <div class="project-images">
       <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_02.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_02.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
       <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_03.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_03.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
       <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_04.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_04.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
       <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_05.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_05.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
             <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_06.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_06.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                   <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_07.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_07.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                         <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_08.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_08.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                               <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_09.jpg" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_09.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
   </div>
@@ -145,19 +145,19 @@
 
   <div class="project-images">
                               <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_10.png" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_10.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                                     <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_11.png" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_11.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                                     <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_12.png" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_12.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
                                     <div class="project-img-block">
-        <img src="artwork/HELLBROOK/HELL_13.png" alt="Project detail"
+        <img src="artwork/HELLBROOK/HELL_13.webp" alt="Project detail"
              onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
       </div>
     </div>
@@ -166,11 +166,11 @@
     <h2 class="slideshow-heading">Logos &amp; Typography</h2>
     <div class="slideshow" id="hellSlideshow">
       <div class="slideshow-track" id="hellTrack">
-        <img src="artwork/HELLBROOK/HELL_15.jpg" alt="Logos & Typography 1">
-        <img src="artwork/HELLBROOK/HELL_16.jpg" alt="Logos & Typography 2">
-        <img src="artwork/HELLBROOK/HELL_17.jpg" alt="Logos & Typography 3">
-        <img src="artwork/HELLBROOK/HELL_18.jpg" alt="Logos & Typography 4">
-        <img src="artwork/HELLBROOK/HELL_19.jpg" alt="Logos & Typography 5">
+        <img src="artwork/HELLBROOK/HELL_15.webp" alt="Logos & Typography 1">
+        <img src="artwork/HELLBROOK/HELL_16.webp" alt="Logos & Typography 2">
+        <img src="artwork/HELLBROOK/HELL_17.webp" alt="Logos & Typography 3">
+        <img src="artwork/HELLBROOK/HELL_18.webp" alt="Logos & Typography 4">
+        <img src="artwork/HELLBROOK/HELL_19.webp" alt="Logos & Typography 5">
       </div>
       <button class="slideshow-btn slideshow-btn--prev" onclick="hellSlide(-1)" aria-label="Previous">
         <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
@@ -178,29 +178,18 @@
       <button class="slideshow-btn slideshow-btn--next" onclick="hellSlide(1)" aria-label="Next">
         <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
       </button>
-      <div class="slideshow-dots" id="hellDots"></div>
     </div>
   </div>
 
   <script>
     (function () {
       const track = document.getElementById('hellTrack');
-      const dots  = document.getElementById('hellDots');
       const total = track.children.length;
       let current = 0;
-
-      // Build dots
-      for (let i = 0; i < total; i++) {
-        const d = document.createElement('button');
-        d.setAttribute('aria-label', 'Slide ' + (i + 1));
-        d.addEventListener('click', () => goTo(i));
-        dots.appendChild(d);
-      }
 
       function goTo(n) {
         current = (n + total) % total;
         track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        Array.from(dots.children).forEach((d, i) => d.classList.toggle('active', i === current));
       }
 
       window.hellSlide = (dir) => goTo(current + dir);

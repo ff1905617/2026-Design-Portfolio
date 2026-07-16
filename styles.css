@@ -5,10 +5,23 @@
       background: #000;
     }
 
+    /* ── Scrollbars ────────────────────────────────── */
+    html { scrollbar-color: #000000 #000000; }
+    ::-webkit-scrollbar { width: 12px; height: 12px; }
+    ::-webkit-scrollbar-track { background: #000000; }
+    ::-webkit-scrollbar-thumb { background: #000000; border: 2px solid #000000; }
+
     /* ── PP Mondwest ───────────────────────────────── */
     @font-face {
-      font-family: 'PPMondwest';
-      src: url('PPMondwest-Regular.otf') format('opentype');
+      font-family: 'PP Right Slab';
+      src: url('PP Right Slab - Narrow Light.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'B612 Mono';
+      src: url('B612Mono-Regular.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
     }
@@ -35,7 +48,7 @@
       transform: translateY(-100%);
     }
     .home-nav-name {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
       color: #fff;
       letter-spacing: 0;
@@ -52,152 +65,83 @@
       font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
       font-size: 16px;
       letter-spacing: 0.18em;
-      color: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
       text-decoration: none;
       text-transform: uppercase;
       transition: color 0.2s;
     }
     .home-nav-links a:hover { color: #fff; }
 
-    /* Main layout — hero is positioned by JS after font load */
+    /* Main layout — centered hero */
     .home-page {
       position: relative;
       z-index: 2;
       width: 100%;
       height: 100vh;
       display: flex;
-      align-items: flex-end;
-      padding-left: 48px;
-      padding-bottom: 64px;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 48px;
+      text-align: left;
       overflow: visible;
     }
     .home-hero {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 18px;
+      letter-spacing: 0.05em;
     }
 
-    /* "HELLO, MY NAME IS" label */
-    .home-label {
+    /* "Hello, my name is" label */
+    .home-greeting {
       font-family: 'Acumin-Variable', sans-serif;
       font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
       font-size: 16px;
       letter-spacing: 0.25em;
-      color: rgba(255, 255, 255, 0.45);
-      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    /* "My Work" label — matches section subheading typeface site-wide */
+    .home-label {
+      font-family: 'PP Right Slab', serif;
+      font-size: 24px;
+      color: #ffffff;
+      line-height: 1.55;
+      letter-spacing: 0.1em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-synthesis: none;
     }
 
     /* Large display name */
     .home-name {
-      font-family: 'PPMondwest', serif;
-      font-size: 190px;
-      color: rgba(255, 255, 255, 1);
+      font-family: 'PP Right Slab', serif;
+      font-size: 200px;
+      color: #ffffff;
       line-height: .9;
       letter-spacing: -0.01em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-synthesis: none;
     }
-
-    /* ── Name ghost animation (stepped, no movement) ── */
-    /*
-      2.5s total, 0.25s intervals (10% each step)
-      APPEAR:     ghost-4@10%(0.25s)  ghost-3@20%(0.5s)  ghost-2@30%(0.75s)  ghost-1@40%(1.0s)
-      H1 ON:      h1@50%(1.25s)  — all layers visible together
-      DISAPPEAR:  ghost-4@60%(1.5s)  ghost-3@70%(1.75s)  ghost-2@80%(2.0s)  ghost-1@90%(2.25s)
-      H1 STAYS:   100% opacity forever
-    */
-
-    .name-ghost-wrap {
-      position: relative;
-      display: block;
-    }
-
-    .name-ghost-wrap span.name-ghost {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      display: block;
-      pointer-events: none;
-      white-space: nowrap;
-    }
-
-    /* All layers start invisible */
-    .ghost-4 { transform: translateY(-190px); opacity: 0; animation: ghost-4-seq 2.5s step-end forwards; }
-    .ghost-3 { transform: translateY(-120px); opacity: 0; animation: ghost-3-seq 2.5s step-end forwards; }
-    .ghost-2 { transform: translateY(-65px);  opacity: 0; animation: ghost-2-seq 2.5s step-end forwards; }
-    .ghost-1 { transform: translateY(-24px);  opacity: 0; animation: ghost-1-seq 2.5s step-end forwards; }
-
-    /* h1 starts invisible (black), joins at 50% then stays forever */
-    .name-ghost-wrap h1 {
-      opacity: 0;
-      animation: h1-seq 2.5s step-end forwards;
-    }
-
-    /* ghost-4: 0% opacity — timing beat, no visual */
-    @keyframes ghost-4-seq {
-      0%, 100% { opacity: 0; }
-    }
-
-    /* ghost-3: on at 20% (0.5s), off at 70% (1.75s) */
-    @keyframes ghost-3-seq {
-      0%   { opacity: 0;    }
-      20%  { opacity: 0.25; }
-      70%  { opacity: 0;    }
-    }
-
-    /* ghost-2: on at 30% (0.75s), off at 80% (2.0s) */
-    @keyframes ghost-2-seq {
-      0%   { opacity: 0;   }
-      30%  { opacity: 0.5; }
-      80%  { opacity: 0;   }
-    }
-
-    /* ghost-1: on at 40% (1.0s), off at 90% (2.25s) */
-    @keyframes ghost-1-seq {
-      0%   { opacity: 0;    }
-      40%  { opacity: 0.75; }
-      90%  { opacity: 0;    }
-    }
-
-    /* h1: appears at 50% (1.25s), stays at 100% forever */
-    @keyframes h1-seq {
-      0%    { opacity: 0; }
-      50%   { opacity: 1; }
-      100%  { opacity: 1; }
-    }
+    .name-break { display: none; }
 
     /* Body copy */
     .home-sub {
-      font-family: 'Acumin-Variable', sans-serif;
-      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-family: 'PP Right Slab', serif;
       font-size: 16px;
-      color: rgba(255, 255, 255, 0.5);
-      line-height: 1.55;
-      letter-spacing: 0.05em;
+      color: #ffffff;
+      line-height: 2;
+      letter-spacing: 0.25em;
     }
-
-    /* CTA button */
-    .home-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: fit-content;
-      padding: 11px 28px;
-      border: 1px solid rgba(255, 255, 255, 0.75);
-      border-radius: 999px;
-      background: transparent;
-      color: #fff;
-      font-family: 'Acumin-Variable', sans-serif;
-      font-variation-settings: 'wght' 500, 'wdth' 67.5, 'slnt' 0;
-      font-size: 16px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin: 6px 0 0 0;
-      transition: background 0.2s, color 0.2s;
+    /* Down arrow */
+    .home-arrow {
+      width: 143px;
+      height: auto;
+      margin-top: 12px;
+      transform: rotate(30deg);
     }
-    .home-cta:hover { background: #fff; color: #000; }
 
     /* ── Homepage work section ──────────────────── */
     .home-work {
@@ -260,7 +204,7 @@
       align-items: center;
     }
     .mobile-menu-wordmark {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
       color: #fff;
       -webkit-font-smoothing: antialiased;
@@ -296,7 +240,7 @@
       font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
       font-size: 16px;
       letter-spacing: 0.2em;
-      color: rgba(255, 255, 255, 0.85);
+      color: #ffffff;
       text-decoration: none;
       text-transform: uppercase;
       transition: color 0.2s;
@@ -327,14 +271,9 @@
       }
 
       /* Scale display name for small screens */
-      .home-name { font-size: clamp(36px, 11vw, 72px); }
-
-      /* CTA button */
-      .home-cta {
-        width: fit-content;
-        justify-content: center;
-        padding: 14px 16px;
-      }
+      .home-name { font-size: clamp(64px, 22vw, 140px); }
+      .name-break { display: block; }
+      .home-arrow { width: 102px; }
 
       /* Tighter padding for the work section on mobile */
       .home-work {
@@ -343,9 +282,9 @@
     }
     /* ── Typography utility classes ────────────────── */
     .large-heading {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: clamp(40px, 7vw, 96px);
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: .9;
       letter-spacing: -0.01em;
       -webkit-font-smoothing: antialiased;
@@ -354,9 +293,9 @@
     }
 
     .subheading {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -506,8 +445,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-      filter 0.6s ease;
       filter: grayscale(20%);
     }
 
@@ -542,77 +479,29 @@
       font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
       font-size: 16px;
       letter-spacing: 0.25em;
-      color: rgba(255,255,255,0.12);
+      color: #ffffff;
       text-transform: uppercase;
       z-index: 1;
     }
 
-    /* Hover overlay */
-    .card-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0);
-      transition: background 0.4s ease;
-      z-index: 1;
-    }
-
-    .card:hover .card-overlay {
-      background: rgba(0, 0, 0, 0.25);
-    }
-
-    .card:hover .card-image img {
-      transform: scale(1.04);
-      filter: grayscale(0%);
-    }
-
-    /* Arrow that appears on hover */
-    .card-arrow {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      border: 1px solid rgba(255,255,255,0.6);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-      opacity: 0;
-      transform: scale(0.7) rotate(-45deg);
-      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .card-arrow svg {
-      width: 12px;
-      height: 12px;
-      stroke: white;
-      fill: none;
-      stroke-width: 1.5;
-    }
-
-    .card:hover .card-arrow {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-
     /* Footer / title area */
     .card-footer {
-      padding: 16px 20px 20px 20px;
+      padding: 16px 0 20px 0;
       display: flex;
-      align-items: flex-end;
+      align-items: baseline;
       justify-content: space-between;
       border-top: black;
     }
 
     .card-title {
-      font-family: 'Acumin-Variable', sans-serif;
-      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
-      font-size: 16px;
+      font-family: 'PP Right Slab', serif;
+      font-size: 24px;
       color: #ffffff;
-      letter-spacing: 0.05em;
-      line-height: 1.2;
-      transition: opacity 0.3s ease;
+      letter-spacing: 0.1em;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-synthesis: none;
     }
 
     .card-meta {
@@ -625,10 +514,6 @@
       white-space: nowrap;
       margin-left: 12px;
       flex-shrink: 0;
-    }
-
-    .card:hover .card-title {
-      opacity: 0.7;
     }
 
     /* Noise overlay — matches homepage */
@@ -645,7 +530,7 @@
     /* Thin horizontal rule after header */
     .divider {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid #ffffff;
       margin: 0 48px 32px 48px;
     }
 
@@ -733,9 +618,9 @@
     }
 
     .project-title {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: clamp(40px, 7vw, 96px);
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: .9;
       letter-spacing: -0.01em;
       -webkit-font-smoothing: antialiased;
@@ -769,7 +654,7 @@
     /* ── Divider ────────────────────────────────────── */
     .project-divider {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid #ffffff;
       margin: 0 48px 48px 48px;
       opacity: 0;
       animation: fadeUp 0.5s ease 0.2s forwards;
@@ -821,7 +706,7 @@
       font-weight: 100;
       font-size: 11px;
       letter-spacing: 0.35em;
-      color: rgba(255,255,255,0.1);
+      color: #ffffff;
       text-transform: uppercase;
       z-index: 1;
     }
@@ -841,9 +726,9 @@
     }
 
     .demonstration-label {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -866,9 +751,9 @@
     }
 
     .features-label {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -929,9 +814,9 @@
     }
 
     .webaudio-label {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -1132,9 +1017,9 @@
     }
 
     .next-title {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -1362,9 +1247,9 @@
     }
 
     .research-label {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -1442,7 +1327,7 @@
       top: 0;
       font-size: 12px;
       letter-spacing: 0.05em;
-      color: rgba(255,255,255,0.25);
+      color: #ffffff;
     }
 
     .pain-points {
@@ -1482,7 +1367,7 @@
       content: '\2014';
       position: absolute;
       left: 0;
-      color: rgba(255,255,255,0.25);
+      color: #ffffff;
     }
 
     /* ── Sketches & Wireframes ──────────────────────── */
@@ -1491,9 +1376,9 @@
     }
 
     .sketches-heading {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -1543,7 +1428,7 @@
       font-weight: 100;
       font-size: 11px;
       letter-spacing: 0.35em;
-      color: rgba(255,255,255,0.1);
+      color: #ffffff;
       text-transform: uppercase;
       z-index: 1;
     }
@@ -1623,9 +1508,9 @@
       margin: 48px 48px 0 48px;
     }
     .slideshow-heading {
-      font-family: 'PPMondwest', serif;
+      font-family: 'PP Right Slab', serif;
       font-size: 24px;
-      color: rgba(255,255,255,1);
+      color: #ffffff;
       line-height: 1.55;
       letter-spacing: 0.1em;
       -webkit-font-smoothing: antialiased;
@@ -1685,26 +1570,6 @@
     }
     .slideshow-btn--prev { left: 14px; }
     .slideshow-btn--next { right: 14px; }
-    .slideshow-dots {
-      position: absolute;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 7px;
-      z-index: 2;
-    }
-    .slideshow-dots button {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(255,255,255,0.3);
-      cursor: pointer;
-      padding: 0;
-      transition: background 0.2s;
-    }
-    .slideshow-dots button.active { background: #fff; }
 
     @media (max-width: 768px) {
       .slideshow-section { margin: 32px 24px 0 24px; }
@@ -1717,9 +1582,9 @@
   }
 
   .models-label {
-    font-family: 'PPMondwest', serif;
+    font-family: 'PP Right Slab', serif;
     font-size: 24px;
-    color: rgba(255,255,255,1);
+    color: #ffffff;
     line-height: 1.55;
     letter-spacing: 0.1em;
     -webkit-font-smoothing: antialiased;
@@ -1752,9 +1617,9 @@
   }
 
   .documentation-label {
-    font-family: 'PPMondwest', serif;
+    font-family: 'PP Right Slab', serif;
     font-size: 24px;
-    color: rgba(255,255,255,1);
+    color: #ffffff;
     line-height: 1.55;
     letter-spacing: 0.1em;
     -webkit-font-smoothing: antialiased;
@@ -1792,9 +1657,9 @@
   }
 
   .applications-label {
-    font-family: 'PPMondwest', serif;
+    font-family: 'PP Right Slab', serif;
     font-size: 24px;
-    color: rgba(255,255,255,1);
+    color: #ffffff;
     line-height: 1.55;
     letter-spacing: 0.1em;
     -webkit-font-smoothing: antialiased;

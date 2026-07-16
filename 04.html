@@ -133,29 +133,18 @@
         <button class="slideshow-btn slideshow-btn--next" onclick="skoSlide(1)" aria-label="Next">
           <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
         </button>
-        <div class="slideshow-dots" id="skoDots"></div>
       </div>
     </div>
 
     <script>
       (function () {
         const track = document.getElementById('skoTrack');
-        const dots  = document.getElementById('skoDots');
         const total = track.children.length;
         let current = 0;
-
-        // Build dots
-        for (let i = 0; i < total; i++) {
-          const d = document.createElement('button');
-          d.setAttribute('aria-label', 'Slide ' + (i + 1));
-          d.addEventListener('click', () => goTo(i));
-          dots.appendChild(d);
-        }
 
         function goTo(n) {
           current = (n + total) % total;
           track.style.transform = 'translateX(-' + (current * 100) + '%)';
-          Array.from(dots.children).forEach((d, i) => d.classList.toggle('active', i === current));
         }
 
         window.skoSlide = (dir) => goTo(current + dir);
