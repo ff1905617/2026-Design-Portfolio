@@ -26,6 +26,20 @@
       font-style: normal;
     }
 
+    @font-face {
+      font-family: 'PP Right Slab Light';
+      src: url('PP Right Slab - Light.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PP Right Slab Medium';
+      src: url('PP Right Slab - Medium.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     /* ── Homepage ──────────────────────────────────── */
 
 
@@ -72,16 +86,15 @@
     }
     .home-nav-links a:hover { color: #fff; }
 
-    /* Main layout — centered hero */
+    /* Main layout — medium-sized hero, not full-screen */
     .home-page {
       position: relative;
       z-index: 2;
       width: 100%;
-      height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
-      padding: 0 48px;
+      padding: 160px 48px 64px 48px;
       text-align: left;
       overflow: visible;
     }
@@ -100,6 +113,7 @@
       font-size: 16px;
       letter-spacing: 0.25em;
       color: #ffffff;
+      text-transform: uppercase;
     }
 
     /* "My Work" label — matches section subheading typeface site-wide */
@@ -129,11 +143,14 @@
 
     /* Body copy */
     .home-sub {
-      font-family: 'PP Right Slab', serif;
-      font-size: 16px;
+      font-family: 'PP Right Slab Light', serif;
+      font-size: 64px;
       color: #ffffff;
-      line-height: 2;
-      letter-spacing: 0.25em;
+      line-height: 69px;
+      letter-spacing: normal;
+    }
+    .home-sub-medium {
+      font-family: 'PP Right Slab Medium', serif;
     }
     /* Down arrow */
     .home-arrow {
@@ -274,6 +291,9 @@
       .home-name { font-size: clamp(64px, 22vw, 140px); }
       .name-break { display: block; }
       .home-arrow { width: 102px; }
+      .home-sub { font-size: clamp(28px, 9vw, 64px); line-height: 1.25; }
+      .sub-break { display: none; }
+      .home-divider { display: none; }
 
       /* Tighter padding for the work section on mobile */
       .home-work {
