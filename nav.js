@@ -1,4 +1,11 @@
 (function () {
+  // Resume links open the PDF directly in a new tab
+  document.querySelectorAll('a[href="resume.html"]').forEach(function (a) {
+    a.setAttribute('href', 'FrancisFitzgerald_Resume_2026.pdf');
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener noreferrer');
+  });
+
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
