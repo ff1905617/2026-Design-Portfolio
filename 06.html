@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heroes Customs – Francis Fitzgerald</title>
+  <meta name="description" content="Heroes Customs is a branding and web design project covering an online store, a customization app experience, and brand guidelines.">
+
+  <!-- Open Graph (Facebook, LinkedIn, iMessage, WhatsApp, Slack, Discord, Telegram, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://francisfitzgerald.design/06.html">
+  <meta property="og:title" content="Heroes Customs – Francis Fitzgerald">
+  <meta property="og:description" content="Heroes Customs is a branding and web design project covering an online store, a customization app experience, and brand guidelines.">
+  <meta property="og:image" content="https://francisfitzgerald.design/artwork/HEROES%20CUSTOMS/HERO_01.png">
+  <meta property="og:image:width" content="1908">
+  <meta property="og:image:height" content="1080">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Heroes Customs – Francis Fitzgerald">
+  <meta name="twitter:description" content="Heroes Customs is a branding and web design project covering an online store, a customization app experience, and brand guidelines.">
+  <meta name="twitter:image" content="https://francisfitzgerald.design/artwork/HEROES%20CUSTOMS/HERO_01.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Top nav (identical to homepage) -->
+  <nav class="home-nav">
+    <span class="home-nav-name" onclick="location.href='index.html'">Francis Fitzgerald</span>
+    <div class="home-nav-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-wordmark">Francis Fitzgerald</span>
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg viewBox="0 0 20 20"><line x1="2" y1="2" x2="18" y2="18"/><line x1="18" y1="2" x2="2" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="work.html">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="resume.html">RESUME</a>
+    </nav>
+  </div>
+
+  <main class="project-page">
+
+    <!-- Back to work -->
+    <a class="back-link" href="work.html">
+      <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+      All Work
+    </a>
+
+    <!-- Header -->
+    <header class="project-header">
+      <div class="project-header-left">
+        <h1 class="project-title">Heroes Customs</h1>
+      </div>
+      <div class="project-header-right">
+        <p class="project-meta-item">Year <span>2025</span></p>
+        <p class="project-meta-item">Role <span>Brand Designer, Web Designer</span></p>
+      </div>
+    </header>
+
+    <hr class="project-divider">
+
+    <!-- Hero image -->
+    <div class="project-hero">
+      <img src="artwork/HEROES CUSTOMS/HERO_01.png" alt="Heroes Customs">
+    </div>
+
+    <!-- Description + sidebar -->
+    <div class="project-body">
+      <div class="project-description">
+        <p>Heroes Customs is a custom sports equipment company based on the South Shore of Massachusetts. Over the course of this three month project, I collaborated with fellow designer <a href="https://www.roryodonnell.com/" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline;">Rory O&rsquo;Donnell</a> to execute a full rebrand and build an online store, integrating a third-party product customization tool.</p>
+      </div>
+      <aside class="project-sidebar">
+        <div>
+          <p class="sidebar-block-label">Disciplines</p>
+          <p class="sidebar-block-value">Branding<br>Web Design</p>
+        </div>
+        <div>
+          <p class="sidebar-block-label">Tools</p>
+          <p class="sidebar-block-value">Figma</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Online Store -->
+    <section class="store-section">
+      <p class="store-label">Online Store</p>
+      <div class="project-images">
+        <div class="project-img-block">
+          <img src="artwork/HEROES CUSTOMS/HERO_02.png" alt="Heroes Customs online store">
+        </div>
+      </div>
+    </section>
+
+    <!-- Customization App -->
+    <div class="slideshow-section">
+      <h2 class="slideshow-heading">Customization App</h2>
+      <div class="slideshow" id="appSlideshow">
+        <div class="slideshow-track" id="appTrack">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_03.png" alt="Customization app screen 1">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_04.png" alt="Customization app screen 2">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_05.png" alt="Customization app screen 3">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_06.png" alt="Customization app screen 4">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_07.png" alt="Customization app screen 5">
+          <img src="artwork/HEROES CUSTOMS/Slideshow App/HERO_08.png" alt="Customization app screen 6">
+        </div>
+        <button class="slideshow-btn slideshow-btn--prev" onclick="appSlide(-1)" aria-label="Previous">
+          <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+        </button>
+        <button class="slideshow-btn slideshow-btn--next" onclick="appSlide(1)" aria-label="Next">
+          <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+        </button>
+      </div>
+      <p class="bodycopy">The client requested a draft for the customization app portion of the website. We ended up sourcing and integrating a third-party customization app but were tasked with designing an example UI.</p>
+    </div>
+
+    <script>
+      (function () {
+        const track = document.getElementById('appTrack');
+        const total = track.children.length;
+        let current = 0;
+
+        function goTo(n) {
+          current = (n + total) % total;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        }
+
+        window.appSlide = (dir) => goTo(current + dir);
+
+        // Touch / swipe
+        let startX = 0;
+        track.parentElement.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        track.parentElement.addEventListener('touchend',   e => {
+          const diff = startX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+        });
+
+        goTo(0);
+      })();
+    </script>
+
+    <!-- Brand Guidelines -->
+    <div class="slideshow-section">
+      <h2 class="slideshow-heading">Brand Guidelines</h2>
+      <div class="slideshow" id="brandSlideshow">
+        <div class="slideshow-track" id="brandTrack">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_002.jpg" alt="Brand guidelines page 1">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_003.jpg" alt="Brand guidelines page 2">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_004.jpg" alt="Brand guidelines page 3">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_005.jpg" alt="Brand guidelines page 4">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_006.jpg" alt="Brand guidelines page 5">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_02.jpg" alt="Brand guidelines page 6">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_03.jpg" alt="Brand guidelines page 7">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_04.jpg" alt="Brand guidelines page 8">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_05.jpg" alt="Brand guidelines page 9">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_06.jpg" alt="Brand guidelines page 10">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_10.jpg" alt="Brand guidelines page 11">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_11.jpg" alt="Brand guidelines page 12">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_12.jpg" alt="Brand guidelines page 13">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_13.jpg" alt="Brand guidelines page 14">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_14.jpg" alt="Brand guidelines page 15">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_15.jpg" alt="Brand guidelines page 16">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_16.jpg" alt="Brand guidelines page 17">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_17.jpg" alt="Brand guidelines page 18">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_18.jpg" alt="Brand guidelines page 19">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_19.jpg" alt="Brand guidelines page 20">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_20.jpg" alt="Brand guidelines page 21">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_21.jpg" alt="Brand guidelines page 22">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_22.jpg" alt="Brand guidelines page 23">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_23.jpg" alt="Brand guidelines page 24">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_24.jpg" alt="Brand guidelines page 25">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_25.jpg" alt="Brand guidelines page 26">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_26.jpg" alt="Brand guidelines page 27">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_27.jpg" alt="Brand guidelines page 28">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_28.jpg" alt="Brand guidelines page 29">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_29.jpg" alt="Brand guidelines page 30">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_30.jpg" alt="Brand guidelines page 31">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_31.jpg" alt="Brand guidelines page 32">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_32.jpg" alt="Brand guidelines page 33">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_33.jpg" alt="Brand guidelines page 34">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_34.jpg" alt="Brand guidelines page 35">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_35.jpg" alt="Brand guidelines page 36">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_36.jpg" alt="Brand guidelines page 37">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_37.jpg" alt="Brand guidelines page 38">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_38.jpg" alt="Brand guidelines page 39">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_39.jpg" alt="Brand guidelines page 40">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_40.jpg" alt="Brand guidelines page 41">
+          <img src="artwork/HEROES CUSTOMS/Slideshow Brand Guidelines/HERO_slideShow_41.jpg" alt="Brand guidelines page 42">
+        </div>
+        <button class="slideshow-btn slideshow-btn--prev" onclick="brandSlide(-1)" aria-label="Previous">
+          <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
+        </button>
+        <button class="slideshow-btn slideshow-btn--next" onclick="brandSlide(1)" aria-label="Next">
+          <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const track = document.getElementById('brandTrack');
+        const total = track.children.length;
+        let current = 0;
+
+        function goTo(n) {
+          current = (n + total) % total;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        }
+
+        window.brandSlide = (dir) => goTo(current + dir);
+
+        // Touch / swipe
+        let startX = 0;
+        track.parentElement.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        track.parentElement.addEventListener('touchend',   e => {
+          const diff = startX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+        });
+
+        goTo(0);
+      })();
+    </script>
+
+    <!-- Next project -->
+    <a class="next-project" href="01.html">
+      <div>
+        <p class="next-label">Next Project</p>
+        <p class="next-title">Hellbrook Brewing Co.</p>
+      </div>
+      <div class="next-arrow">
+        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
+      </div>
+    </a>
+
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>

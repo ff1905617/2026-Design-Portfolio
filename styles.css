@@ -1591,6 +1591,10 @@
     .slideshow-btn--prev { left: 14px; }
     .slideshow-btn--next { right: 14px; }
 
+    .slideshow-section .bodycopy {
+      margin-top: 20px;
+    }
+
     @media (max-width: 768px) {
       .slideshow-section { margin: 32px 24px 0 24px; }
       .slideshow-btn { display: none; }
@@ -1669,6 +1673,35 @@
 
   @media (max-width: 768px) {
     .documentation-section { margin: 48px 24px 0 24px; }
+  }
+
+  /* ── Online Store ─────────────────────────────────── */
+  .store-section {
+    margin: 64px 48px 0 48px;
+  }
+
+  .store-label {
+    font-family: 'PP Right Slab', serif;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.55;
+    letter-spacing: 0.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    margin-bottom: 16px;
+  }
+
+  .store-section .project-images {
+    margin: 0;
+  }
+
+  .store-section .project-img-block {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 768px) {
+    .store-section { margin: 48px 24px 0 24px; }
   }
 
   /* ── Applications ─────────────────────────────────── */
