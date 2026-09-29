@@ -24,6 +24,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/ext4zpv.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap">
 </head>
 <body>
 
@@ -80,305 +81,377 @@
 
     <hr class="project-divider">
 
-    <!-- Hero image -->
-    <div class="project-hero">
-      <img src="artwork/ODDGREDIENTS/ODD_01.png" alt="Project hero image" class="project-hero-placeholder">
+    <div class="project-video cs-demo" id="demonstration">
+      <video class="hero-video" src="artwork/ODDGREDIENTS/ODD_demonstration.mp4" controls preload="metadata" playsinline aria-label="Oddgredients app demonstration"></video>
     </div>
 
-    <!-- Description + sidebar -->
-    <div class="project-body">
-      <div class="project-description">
-        <p>Have you ever found yourself needing to make a meal but all you have are a couple of stray ingredients? Oddgredients is an AI native recipe assistant created to help its users turn their mismatched ingredients and leftovers into fun, delicious meals. Prompt the AI chatbot, take pictures of what you&rsquo;re working with and let Oddgredients do the rest. Oddgredients also has a social media feature that allows users to browse recipes and share their creations with others. Turn your odd ingredients gourmet!</p>
-      </div>
-      <aside class="project-sidebar">
+    <div class="cs-layout">
+      <nav aria-label="Case study sections">
+        <ul class="cs-sidenav">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#researchMethods">Research Methods</a></li>
+          <li><a href="#concept">The Concept</a></li>
+          <li><a href="#userPersonas">User Personas</a></li>
+          <li><a href="#sketchesI">Sketches I</a></li>
+          <li><a href="#userValidationI">User Validation I</a></li>
+          <li><a href="#sketchesII">Sketches II</a></li>
+          <li><a href="#userValidationII">User Validation II</a></li>
+          <li><a href="#designSystem">Design System</a></li>
+          <li><a href="#demonstration">Demonstration</a></li>
+        </ul>
+      </nav>
+
+      <div class="cs-content">
+
+        <!-- Title Block -->
         <div>
-          <p class="sidebar-block-label">Disciplines</p>
-          <p class="sidebar-block-value">Product Design<br>UX Research</p>
+          <p class="bodycopy-heading">UI/UX Case Study</p>
+          <h2 class="cs-title">Oddgredients Recipe Assistant</h2>
         </div>
-        <div>
-          <p class="sidebar-block-label">Tools</p>
-          <p class="sidebar-block-value">Figma<br>Illustrator</p>
-        </div>
-      </aside>
-    </div>
 
-    <!-- Demonstration -->
-    <section class="demonstration-section">
-      <p class="demonstration-label">Demonstration</p>
-      <div class="project-video">
-        <video
-          loop
-          playsinline
-          controls
-          preload="auto"
-          class="hero-video">
-          <source src="artwork/ODDGREDIENTS/ODD_demonstration.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+        <!-- Background -->
+        <section id="background">
+          <h2 class="subheading">Background</h2>
+          <p>During school, I was on the go 7 days a week. Between classes, work and homework, I didn’t have much time or energy to do anything else. I strayed from my normal meal prepping routine and as a result, my nutrition and finances suffered.</p>
+          <p>Going to the grocery store was something I did in a rush and without a plan. I would pick an online recipe, buy the ingredients for it and eat it for the next 1-2 days. Many of these ingredients were things that I wouldn’t cook with on a regular basis. For example, if a recipe required 1 tablespoon of hoisin sauce, I would buy a whole bottle for around $5.</p>
+          <p>As a result of my disorganized cooking habits, I often wound up with random, mismatched ingredients that would unfortunately end up going to waste. This proved to be a wasteful and expensive problem.</p>
+        </section>
 
-    <!-- Key Features -->
-    <section class="features-section">
-      <p class="features-label">Key Features</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-caption">
-            <p>AI recipe creation.</p>
-          </div>
-          <div class="feature-frame">
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto">
-              <source src="artwork/ODDGREDIENTS/ODD_02.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-caption">
-            <p>AI ingredient recognition.</p>
-          </div>
-          <div class="feature-frame">
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto">
-              <source src="artwork/ODDGREDIENTS/ODD_03.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-caption">
-            <p>Share and browse unique recipes.</p>
-          </div>
-          <div class="feature-frame">
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto">
-              <source src="artwork/ODDGREDIENTS/ODD_04.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- The Problem -->
+        <section id="problem">
+          <h2 class="subheading">The Problem</h2>
+          <p>The main problem here is that I find myself with nothing but mismatched ingredients at home and struggle to find creative ways to use them instead of throwing them away. I wrote down some of my own issues that could be potential causes for the problem.</p>
+          <p>Personal Factors:</p>
+          <ul>
+            <li>Disorganization</li>
+            <li>Lack of time</li>
+            <li>Lack of energy</li>
+          </ul>
+          <p>External Factors:</p>
+          <ul>
+            <li>Traditional online recipes require extra ingredients.</li>
+            <li>Lack of creative online recipe options for mismatched ingredients.</li>
+            <li>Lack of budget meal recipes from real people facing the same problem.</li>
+          </ul>
+          <p>“Disorganization” was the word that stuck out to me the most. If I got back on my meal prepping schedule, would I stop having this problem? Is a completely perfect system where one doesn’t wind up with any mismatched ingredients or waste any food possible? Do other people face the same problem I face? Who else is facing this problem?</p>
+        </section>
 
-    <!-- Research -->
-    <section class="research-section">
-      <p class="research-label">Research</p>
-
-      <!-- User Personas -->
-      <div class="personas-section">
-        <p class="personas-heading">User Personas</p>
-        <div class="personas-grid">
-          <div class="persona-card">
-            <img class="persona-photo" src="images/ODD_persona_01.jpg" alt="Brendan, 23, Security Guard">
-            <div class="persona-info">
-              <p class="persona-name">Brendan, 23 &mdash; Security Guard</p>
-              <p class="persona-desc">
-                23 year old college senior living with roommates.<br>
-                Goes to class in the morning and works the second shift (4:00pm to midnight).<br>
-                Due to lack of time, Brendan often orders takeout more than he can afford.<br>
-                Often finds himself in a pinch in terms of his meals.
-              </p>
+        <!-- Research Methods -->
+        <section id="researchMethods">
+          <h2 class="subheading">Research Methods</h2>
+          <p>I conducted an online survey in order to gain real data on the eating + shopping habits of my peers.</p>
+          <div class="cs-stats">
+            <div>
+              <p class="cs-stat">100%</p>
+              <p>Of users surveyed reported finding themselves with nothing but mismatched ingredients at home sometimes or all the time.</p>
+            </div>
+            <div>
+              <p class="cs-stat">90%</p>
+              <p>Of users surveyed reported that they follow a loose plan when they shop for food and don’t have a cohesive plan.</p>
+            </div>
+            <div>
+              <p class="cs-stat">81%</p>
+              <p>Of users surveyed reported eating food made with mismatched ingredients sometimes or all the time.</p>
             </div>
           </div>
-          <div class="persona-card">
-            <img class="persona-photo" src="images/ODD_persona_02.jpg" alt="Linda, 46, Social Worker">
-            <div class="persona-info">
-              <p class="persona-name">Linda, 46 &mdash; Social Worker</p>
-              <p class="persona-desc">
-                46 year old mom with two kids.<br>
-                Both her and her husband are environmentally conscious and want to limit their food waste.<br>
-                Works during the day and cooks dinner for her family in the evening.<br>
-                Often finds herself reluctantly throwing away leftovers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+          <p>I also found supporting evidence on food waste:</p>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“37% of food waste in the United States happens in the home.”</blockquote>
+            <figcaption>—Natural Resources Defense Council</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“The average American throws away about $728 worth of edible food per year.”</blockquote>
+            <figcaption>—Environmental Protection Agency</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“10% of global greenhouse gas emissions result from food loss and waste.”</blockquote>
+            <figcaption>—World Resources Institute</figcaption>
+          </figure>
+          <p>It turns out most people don’t have it all figured out. To further reinforce my research, I decided to conduct a two-week long study on myself. I tried to save as much food as possible and logged whenever I found a use for old ingredients or threw something out that could have been eaten. I put a green star next to “food-saving moments” and a red star next to “food-wasting moments.”</p>
+          <img src="artwork/ODDGREDIENTS/ODD_01.JPG" alt="Two-week food log with green and red stars" width="4032" height="3024" loading="lazy" style="width: 705px;">
+          <p>During these two weeks I ended up with 10 green stars and 5 red stars. What I learned from my research is that everyone produces some food waste no matter what. What I wanted to explore through this project is how food can be used before it becomes waste. This leads me to question that would guide the rest of my project...</p>
+          <blockquote class="cs-question">How can mismatched ingredients and leftovers be turned into new recipes?</blockquote>
+        </section>
 
-      <!-- Current User Flow -->
-      <div class="flow-section">
-        <p class="flow-heading">Current User Flow</p>
-        <div class="flow-grid">
-          <div class="flow-card">
-            <p class="flow-user">Brendan</p>
-            <ol class="flow-steps">
-              <li>Brendan gets home after school and needs to make a meal before work.</li>
-              <li>He doesn&rsquo;t have the time or money to go grocery shopping.</li>
-              <li>Brendan rummages through his kitchen. All he has to work with is a potato and some hoisin sauce.</li>
-              <li>Brendan is upset. He doesn&rsquo;t know what to make and is running out of time before his shift.</li>
-              <li>His options are to Doordash a meal at work, using his credit card, or go hungry.</li>
+        <!-- The Concept -->
+        <section id="concept">
+          <h2 class="subheading">04 The Concept</h2>
+          <p>After determining the question that would guide this project, it was time to begin creating concepts for a solution. I started by making a mind map surrounding the question. I would later use this to determine the app’s key features.</p>
+          <img src="artwork/ODDGREDIENTS/ODD_02.png" alt="Mind map exploring the project question" width="3060" height="2327" loading="lazy" style="width: 1008px; margin-top: 24px;">
+          <p>The four main ideas that stuck out to me from my mind map were:</p>
+          <ul>
+            <li>Meal prepping</li>
+            <li>Budgeting</li>
+            <li>Recipe generation</li>
+            <li>Community input</li>
+          </ul>
+          <p>I decided I would call the solution “Oddgredients.” It would be a recipe app that uses AI to help users create meals and meal plans from their mismatched ingredients. I created a logo for the app as well, inspired by the idea of food scraps being sewn together like an ingredient Frankenstein.</p>
+          <img src="artwork/ODDGREDIENTS/ODD_logoformula.jpg" alt="Logo formula: a fish, an orange and a fork and knife combine into a sketch, then the finished Oddgredients logo" width="3483" height="2368" loading="lazy" style="width: 1008px;">
+        </section>
+
+        <!-- User Personas -->
+        <section id="userPersonas">
+          <h2 class="subheading">User Personas</h2>
+          <p>Using all of the information I gathered during my research, I created two user personas who may be concerned with my question.</p>
+          <ul>
+            <li>Young adults and college students (18-24) who aren’t quite financially established. They may have poor spending habits and organizational skills. Young people are generally open to experimenting with new recipes and don’t quite have a routine.</li>
+            <li>Environmentally Conscious Home Cooks of all ages who seek to reduce their food waste for environmental reasons. These individuals are typically financially established and may be seeking more creative recipes.</li>
+          </ul>
+
+          <article class="cs-persona">
+            <div class="cs-badge">
+              <img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_01.jpg" alt="Brendan">
+              <p>Brendan, 23 — Security Guard</p>
+            </div>
+            <p>23 year old college senior living with roommates. Goes to class in the morning and works the second shift (4:00pm to midnight). Due to lack of time, Brendan often orders takeout more than he can afford. Often finds himself in a pinch in terms of his meals.</p>
+            <p>Current Negative User Flow:</p>
+            <ol>
+              <li>Gets home after school and needs to make a meal before work.</li>
+              <li>All he has is a potato and some hoisin sauce.</li>
+              <li>He doesn’t have time to go shopping before work.</li>
+              <li>Brendan decides to Doordash food at work, putting it on his credit card.</li>
             </ol>
-            <div class="pain-points">
-              <p class="pain-points-label">Pain Points</p>
-              <ul class="pain-points-list">
-                <li>Brendan thinks he has nothing to work with and is exhausted from school.</li>
-                <li>He is working within a tight budget and doesn&rsquo;t want to use his credit card.</li>
-                <li>He has limited time to make a meal and is considering just skipping dinner entirely.</li>
-              </ul>
+            <p>Pain Points:</p>
+            <ul>
+              <li>Brendan thinks he has nothing to work with and is exhausted from school.</li>
+              <li>He is working within a tight budget and doesn’t want to use his credit card.</li>
+              <li>He has limited time to make a meal and is considering just skipping dinner entirely.</li>
+            </ul>
+          </article>
+
+          <article class="cs-persona">
+            <div class="cs-badge">
+              <img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_02.jpg" alt="Linda">
+              <p>Linda, 46 — Social Worker</p>
             </div>
-          </div>
-          <div class="flow-card">
-            <p class="flow-user">Linda</p>
-            <ol class="flow-steps">
-              <li>Linda gets home from work and is tasked with making dinner for herself, her kids and her husband.</li>
-              <li>She has a couple of thai chili peppers that she needs to use before they go bad.</li>
-              <li>She also has some pre-made pancake mix from the day before that is starting to get crusty.</li>
-              <li>Linda throws out the pancake mix and decides to go to the grocery store and buy ingredients for a dish that she can use the chili peppers in.</li>
-              <li>Linda feels bad that she wasted her pancake mix and ends up spending $50 at the grocery store.</li>
+            <p>46 year old mom with two kids. Both her and her husband are environmentally conscious and want to limit their food waste. Works during the day and cooks dinner for her family in the evening. Often finds herself reluctantly throwing away leftovers.</p>
+            <p>Current Negative User Flow:</p>
+            <ol>
+              <li>Is tasked with making dinner for her family after work.</li>
+              <li>She has a couple of peppers and pre made pancake mix on hand.</li>
+              <li>Linda throws out the pancake mix and goes to the grocery store and buy ingredients for a dish that she can use the chili peppers in.</li>
+              <li>Brendan decides to Doordash food at work, putting it on his credit card.</li>
             </ol>
-            <div class="pain-points">
-              <p class="pain-points-label">Pain Points</p>
-              <ul class="pain-points-list">
-                <li>Linda has multiple ingredients that will go to waste if she doesn&rsquo;t use them.</li>
-                <li>She thinks that she can&rsquo;t work them both into a recipe.</li>
-                <li>She has to decide which ingredient to keep and which ingredient to throw out.</li>
-                <li>She ends up spending too much money at the grocery store on a recipe she only has one ingredient for.</li>
-              </ul>
+            <p>Pain Points:</p>
+            <ul>
+              <li>Linda has multiple ingredients that will go to waste if she doesn’t use them.</li>
+              <li>She thinks that she can’t work them both into a recipe.</li>
+              <li>She has to decide which ingredient to keep and which ingredient to throw out.</li>
+              <li>She ends up spending too much money at the grocery store on a recipe she only has one ingredient for.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Sketches I -->
+        <section id="sketchesI">
+          <h2 class="subheading">Sketches I</h2>
+          <p>I created sketches of the key features and how each user persona would navigate the app.</p>
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_01.jpg" alt="Brendan"></li>
+            <li class="cs-storyboard-frame"><p>Brendan opens Oddgredients.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He enters his budget and calorie goals.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He creates a new meal plan and selects recipes from the community.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>Brendan now has a budget friendly meal plan.</p></li>
+          </ol>
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_02.jpg" alt="Linda"></li>
+            <li class="cs-storyboard-frame"><p>Linda opens Oddgredients</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>She enters her ingredients into a new recipe.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>She creates a new recipe and adds the ingredient suggestions.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>Linda saves the recipe and shares it with her sister.</p></li>
+          </ol>
+          <div>
+            <img src="artwork/ODDGREDIENTS/ODD_03.jpg" alt="Sketches of Brendan's meal plan flow" width="3696" height="2870" loading="lazy">
+            <img src="artwork/ODDGREDIENTS/ODD_04.jpg" alt="Sketches of Linda's recipe flow" width="3957" height="2975" loading="lazy">
+          </div>
+        </section>
+
+        <!-- User Validation I -->
+        <section id="userValidationI">
+          <h2 class="subheading">User Validation I</h2>
+          <p>The user testing phase was a chance to review the app’s key features. This phase of the project opened my eyes to how easy it is to create something nobody will use without first getting feedback from others. After going through the wireframes with some of my peers, I realized that there were too many features. This made the app confusing and diluted it. Here’s some of the feedback I got that hit the hardest:</p>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“This may work as something as simple as an AI-native recipe generator.”</blockquote>
+            <figcaption>—Elyse B.</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“I would rather be able to take pictures than searching for my ingredients one by one.”</blockquote>
+            <figcaption>—Tony L.</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“The meal planning feature feels like an afterthought. This should either be a recipe generator or a meal prepping app.”</blockquote>
+            <figcaption>—Beni Y.</figcaption>
+          </figure>
+          <p>What did work:</p>
+          <ul>
+            <li>AI Recipe Generation</li>
+            <li>Community sharing Feature</li>
+          </ul>
+          <p>What didn’t work:</p>
+          <ul>
+            <li>Meal prepping feature</li>
+            <li>Budgeting feature</li>
+            <li>Current UI for ingredient search</li>
+          </ul>
+          <div>
+            <img src="artwork/ODDGREDIENTS/ODD_05.png" alt="First-round wireframes, part 1" width="2646" height="1506" loading="lazy">
+            <img src="artwork/ODDGREDIENTS/ODD_wireframesFailure_06.png" alt="First-round wireframes, part 2" width="2651" height="1499" loading="lazy">
+            <img src="artwork/ODDGREDIENTS/ODD_wireframesFailure_07.png" alt="First-round wireframes, part 3" width="2647" height="1501" loading="lazy">
+          </div>
+        </section>
+
+        <!-- Sketches II -->
+        <section id="sketchesII">
+          <h2 class="subheading">Sketches II</h2>
+          <p>Considering the feedback I got in my first round of user testing, I stripped the app down to just the recipe generator and community feature. I was inspired by the barebones camera UI of Snapchat and the minimal AI-chatbot input box. I created two new happy paths and sketches.</p>
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_01.jpg" alt="Brendan"></li>
+            <li class="cs-storyboard-frame"><p>Brendan opens Oddgredients.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He takes pictures both ingredients and verifies them.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He prompts the AI chatbot with some lose guidelines.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>His recipe is finished and he saves is to his recipe catalog.</p></li>
+          </ol>
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="artwork/ODDGREDIENTS/ODD_persona_02.jpg" alt="Linda"></li>
+            <li class="cs-storyboard-frame"><p>Linda opens Oddgredients</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>She searches for her ingredient on the “browse” tab.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>She finds a recipe she likes that uses her ingredient.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>Linda saves the recipe and shares it with her friend.</p></li>
+          </ol>
+          <div>
+            <img src="artwork/ODDGREDIENTS/ODD_08.png" alt="Sketches of Brendan's camera and chatbot flow" width="1280" height="720" loading="lazy">
+            <img src="artwork/ODDGREDIENTS/ODD_09.png" alt="Sketches of Linda's browse and share flow" width="1280" height="720" loading="lazy">
+          </div>
+        </section>
+
+        <!-- User Validation II -->
+        <section id="userValidationII">
+          <h2 class="subheading">User Validation II</h2>
+          <p>The second round of user testing came with new wireframes. I reduced the app to a simple combination of an AI recipe generator and a recipe sharing community where users can post their recipes. I also built out the key features using my design system.</p>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“The tab UI on the ‘Recipe’ page is a bit confusing.”</blockquote>
+            <figcaption>—Tony L.</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“The chatbot feature makes me feel like I have more control over the result.”</blockquote>
+            <figcaption>—Beni Y.</figcaption>
+          </figure>
+          <figure class="cs-quote">
+            <blockquote class="cs-quote-text">“I like being able to browse recipes as if I were scrolling on Instagram.”</blockquote>
+            <figcaption>—Jodie B.</figcaption>
+          </figure>
+          <p>What did work:</p>
+          <ul>
+            <li>Camera feature</li>
+            <li>Social media-like recipe sharing community</li>
+          </ul>
+          <p>What didn’t work:</p>
+          <ul>
+            <li>Calorie count on ingredients (why is it necessary?)</li>
+            <li>Tab UI for switching between ingredients and instructions on recipe page.</li>
+          </ul>
+          <img src="artwork/ODDGREDIENTS/ODD_10.png" alt="Second-round wireframes" width="2298" height="1293" loading="lazy">
+          <div class="cs-feature-videos">
+            <div>
+              <video src="artwork/ODDGREDIENTS/ODD_feature_11.mp4" autoplay muted loop playsinline width="521" height="1078" aria-label="Recipe Chatbot"></video>
+              <p>Recipe Chatbot</p>
+            </div>
+            <div>
+              <video src="artwork/ODDGREDIENTS/ODD_feature_12.mp4" autoplay muted loop playsinline width="521" height="1078" aria-label="Ingredient Verification"></video>
+              <p>Ingredient Verification</p>
+            </div>
+            <div>
+              <video src="artwork/ODDGREDIENTS/ODD_feature_13.mp4" autoplay muted loop playsinline width="521" height="1078" aria-label="Oddgredients Community"></video>
+              <p>Oddgredients Community</p>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Happy Path -->
-      <div class="happy-path-section">
-        <p class="happy-path-section-heading">Happy Path</p>
+        <!-- Design System -->
+        <section id="designSystem">
+          <h2 class="subheading">Design system</h2>
 
-        <div class="happy-path">
-          <p class="happy-path-label">Brendan</p>
-          <div class="happy-path-steps happy-path-steps--4">
-            <div class="happy-path-step">
-              <p class="step-number">01</p>
-              <p class="step-title">Describe the Craving</p>
-              <p class="step-desc">Brendan downloads the Oddgredients app and describes what he&rsquo;s in the mood to eat.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">02</p>
-              <p class="step-title">Snap Ingredients</p>
-              <p class="step-desc">He takes pictures of his ingredients and sends them to the chat bot.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">03</p>
-              <p class="step-title">Get Recipes</p>
-              <p class="step-desc">Oddgredients gives Brendan three quick and easy recipe options and even recommends supplementary ingredients.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">04</p>
-              <p class="step-title">Cook &amp; Save</p>
-              <p class="step-desc">Brendan makes the recipe he is recommended by Oddgredients and doesn&rsquo;t have to spend money or go hungry during his shift.</p>
+          <div class="cs-ds-group cs-ds-group--first">
+            <p>Colors:</p>
+            <div class="cs-swatches">
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #FF5E00;"></div><p>--color-primary-50:<br>#FF5E00<br>Logotype, primary button, icons</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #6F00FF;"></div><p>--color-secondary-50:<br>#6F00FF<br>Secondary button</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #3BC47C;"></div><p>--color-tertiary-50:<br>#3BC47C<br>Tertiary Button</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #000000;"></div><p>--color-text-0:<br>#000000<br>Primary Text</p></div>
+
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #FF9E66;"></div><p>--color-primary-70:<br>#FF9E66<br>Tags</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #A966FF;"></div><p>--color-secondary-70:<br>#A966FF<br>Tags</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #89DCB0;"></div><p>--color-tertiary-70:<br>#3BC47C<br>Tags</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #808080;"></div><p>--color-text-50:<br>#808080<br>Input &amp; Timestamp Text</p></div>
+
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #FFDFCC;"></div><p>--color-primary-90:<br>#FFDFCC<br>Disabled</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #E2CCFF;"></div><p>--color-secondary-90:<br>#E2CCFF<br>Disabled</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #D8F3E5;"></div><p>--color-tertiary-90:<br>#D8F3E5<br>Disabled</p></div>
+              <div class="cs-swatch"><div class="cs-swatch-chip" style="background: #FFFFFF; border: 1px solid #000000;"></div><p>--color-text-100:<br>#FFFFFF<br>Secondary Button Text</p></div>
             </div>
           </div>
-        </div>
 
-        <div class="happy-path">
-          <p class="happy-path-label">Linda</p>
-          <div class="happy-path-steps happy-path-steps--4">
-            <div class="happy-path-step">
-              <p class="step-number">01</p>
-              <p class="step-title">Open the App</p>
-              <p class="step-desc">Linda opens the Oddgredients app because she isn&rsquo;t sure how to turn her leftovers into a meal.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">02</p>
-              <p class="step-title">Explore &amp; Search</p>
-              <p class="step-desc">She opens the &ldquo;explore&rdquo; tab and searches for the ingredient she wants to use.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">03</p>
-              <p class="step-title">Find a Recipe</p>
-              <p class="step-desc">She finds a recipe for &ldquo;Chili Pepper Pancakes.&rdquo; She is able to use her leftovers and her odd ingredient to make a delicious meal.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">04</p>
-              <p class="step-title">Share &amp; Save</p>
-              <p class="step-desc">Her husband and kids love the recipe. Linda saves it to the &ldquo;my recipes&rdquo; tab and shares it with a friend.</p>
+          <div class="cs-ds-group">
+            <p>Typefaces:</p>
+            <div class="cs-specimens">
+              <div><p class="cs-specimen-sample" style="font-family: 'Brooklyn Heritage Script', cursive;">Aa</p><p>--font-display:<br>Brooklyn Heritage Script Regular</p></div>
+              <div><p class="cs-specimen-sample" style="font-family: 'Archivo', sans-serif;">Aa</p><p>--font-p:<br>Archivo Regular</p></div>
+              <div><p class="cs-specimen-sample" style="font-family: 'Archivo', sans-serif; font-weight: 700;">Aa</p><p>--font-p-bold:<br>Archivo Bold</p></div>
+              <div><p class="cs-specimen-sample" style="font-family: 'Archivo', sans-serif; color: #808080;">Aa</p><p>--font-p-input:<br>Archivo Regular</p></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Sketches & Wireframes -->
-    <section class="sketches-section">
-      <p class="sketches-heading">Sketches &amp; Wireframes</p>
-      <div class="sketches-grid">
-        <div class="sketch-block">
-          <img src="artwork/ODDGREDIENTS/ODD_sketch_01.png" alt="Oddgredients sketch 1">
-        </div>
-        <div class="sketch-block">
-          <img src="artwork/ODDGREDIENTS/ODD_sketch_02.png" alt="Oddgredients sketch 2"
-               onerror="this.parentElement.innerHTML='<div class=\'sketch-placeholder\'><span class=\'sketch-placeholder-label\'>Sketch 02</span></div>'">
-        </div>
-      </div>
+          <div class="cs-ds-group">
+            <p>Radii:</p>
+            <div class="cs-radii">
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 8px;"></div><p>--radius-image-sm:<br>4px</p></div>
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 8px;"></div><p>--radius-image-md:<br>8px</p></div>
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 16px;"></div><p>--radius-image-lg:<br>16px</p></div>
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 32px;"></div><p>--radius-iunput-sm:<br>32px</p></div>
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 64px;"></div><p>--radius-iunput-lg:<br>64px</p></div>
+              <div><div class="cs-radius-sample" style="border-top-left-radius: 88px;"></div><p>--radius-button:<br>88px</p></div>
+            </div>
+          </div>
 
-      <div class="wireframes-block">
-        <img src="artwork/ODDGREDIENTS/ODD_wireframes.png" alt="Oddgredients wireframes">
-      </div>
-    </section>
+          <div class="cs-ds-group">
+            <p>Spacing:</p>
+            <div class="cs-spacings">
+              <div><div class="cs-spacing-sample" style="width: 8px;"></div><p>--spacing-1:<br>8px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 16px;"></div><p>--spacing-2:<br>16px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 24px;"></div><p>--spacing-3:<br>24px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 32px;"></div><p>--spacing-4<br>32px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 40px;"></div><p>--spacing-5:<br>40px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 48px;"></div><p>--spacing-6:<br>48px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 56px;"></div><p>--spacing-7:<br>56px</p></div>
+              <div><div class="cs-spacing-sample" style="width: 64px;"></div><p>--spacing-8:<br>64px</p></div>
+            </div>
+          </div>
 
-    <div class="slideshow-section">
-      <h2 class="slideshow-heading">Logos &amp; Typography</h2>
-      <div class="slideshow" id="oddSlideshow">
-        <div class="slideshow-track" id="oddTrack">
-          <img src="artwork/ODDGREDIENTS/ODD_brandSlides_01.png" alt="Logos & Typography 1">
-          <img src="artwork/ODDGREDIENTS/ODD_brandSlides_02.png" alt="Logos & Typography 2">
-          <img src="artwork/ODDGREDIENTS/ODD_brandSlides_03.png" alt="Logos & Typography 3">
-          <img src="artwork/ODDGREDIENTS/ODD_brandSlides_04.png" alt="Logos & Typography 4">
-          <img src="artwork/ODDGREDIENTS/ODD_brandSlides_05.png" alt="Logos & Typography 5">
-        </div>
-        <button class="slideshow-btn slideshow-btn--prev" onclick="oddSlide(-1)" aria-label="Previous">
-          <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
-        </button>
-        <button class="slideshow-btn slideshow-btn--next" onclick="oddSlide(1)" aria-label="Next">
-          <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
-        </button>
+          <div class="cs-ds-group">
+            <p>Drop Shadow:</p>
+            <div class="cs-shadows">
+              <div><div class="cs-shadow-sample" style="box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.25);"></div><p>--drop-shadow-1:<br>x: 0<br>y: 0<br>blur: 2px<br>spread: 1px</p></div>
+              <div><div class="cs-shadow-sample" style="box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);"></div><p>--drop-shadow-2:<br>x: 0<br>y: 0<br>blur: 4px<br>spread: 2px</p></div>
+              <div><div class="cs-shadow-sample" style="box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);"></div><p>--drop-shadow-3:<br>x: 0<br>y: 0<br>blur: 8px<br>spread: 4px</p></div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
-
-    <script>
-      (function () {
-        const track = document.getElementById('oddTrack');
-        const total = track.children.length;
-        let current = 0;
-
-        function goTo(n) {
-          current = (n + total) % total;
-          track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        }
-
-        window.oddSlide = (dir) => goTo(current + dir);
-
-        // Touch / swipe
-        let startX = 0;
-        track.parentElement.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-        track.parentElement.addEventListener('touchend',   e => {
-          const diff = startX - e.changedTouches[0].clientX;
-          if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-        });
-
-        goTo(0);
-      })();
-    </script>
-
-    <!-- Next project -->
-    <a class="next-project" href="04.html">
-      <div>
-        <p class="next-label">Next Project</p>
-        <p class="next-title">Skorochod</p>
-      </div>
-      <div class="next-arrow">
-        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
-      </div>
-    </a>
 
   </main>
 

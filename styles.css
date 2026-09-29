@@ -1728,3 +1728,355 @@
   @media (max-width: 768px) {
     .applications-section { margin: 48px 24px 0 24px; }
   }
+  /* ── Oddgredients Case Study (03.html) ───────────── */
+    .cs-demo {
+      margin: 0 48px 64px 48px;
+      scroll-margin-top: 100px;
+    }
+
+    .cs-demo video {
+      display: block;
+    }
+
+    .cs-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      column-gap: 140px;
+      margin: 0 48px;
+    }
+
+    .cs-layout > nav {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+
+    .cs-sidenav {
+      list-style: none;
+    }
+
+    .cs-sidenav a {
+      display: block;
+      padding: 8px 0;
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .cs-sidenav a:hover {
+      opacity: 0.6;
+    }
+
+    .cs-content {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      min-width: 0;
+    }
+
+    .cs-content section {
+      scroll-margin-top: 100px;
+    }
+
+    .cs-content section > * + * {
+      margin-top: 16px;
+    }
+
+    .cs-content .bodycopy-heading {
+      margin-bottom: 12px;
+    }
+
+    .cs-content p {
+      line-height: 1.75;
+    }
+
+    .cs-content ul,
+    .cs-content ol {
+      padding-left: 24px;
+    }
+
+    .cs-content li {
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      line-height: 1.75;
+      color: #ffffff;
+    }
+
+    .cs-content img,
+    .cs-content video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .cs-title {
+      font-family: 'PP Right Slab', serif;
+      font-size: clamp(32px, 4.5vw, 64px);
+      font-weight: normal;
+      color: #ffffff;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-synthesis: none;
+    }
+
+    /* Stats */
+    .cs-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .cs-content .cs-stat {
+      font-family: 'PP Right Slab', serif;
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin-bottom: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Quotes */
+    .cs-quote-text {
+      font-family: 'PP Right Slab Light', serif;
+      font-size: 24px;
+      line-height: 1.4;
+      color: #ffffff;
+      margin-bottom: 8px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .cs-quote figcaption {
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+
+    .cs-question {
+      font-family: 'PP Right Slab', serif;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* User personas */
+    .cs-persona {
+      padding: 16px;
+    }
+
+    .cs-persona > * + * {
+      margin-top: 16px;
+    }
+
+    .cs-badge {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cs-badge p {
+      font-variation-settings: 'wght' 600, 'wdth' 67.5, 'slnt' 0;
+    }
+
+    .cs-avatar {
+      flex: none;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Storyboards */
+    .cs-content .cs-storyboard {
+      display: flex;
+      align-items: center;
+      gap: clamp(8px, 2vw, 32px);
+      list-style: none;
+      padding: 0;
+    }
+
+    .cs-storyboard-avatar {
+      flex: none;
+    }
+
+    .cs-storyboard .cs-avatar {
+      width: clamp(48px, 6vw, 88px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+
+    .cs-storyboard-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 1 180px;
+      min-width: 0;
+      aspect-ratio: 1 / 1;
+    }
+
+    .cs-storyboard-frame p {
+      max-width: 128px;
+      text-align: center;
+    }
+
+    .cs-content .cs-storyboard-arrow {
+      flex: none;
+      width: 32px;
+      font-size: 32px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    /* Key feature videos */
+    .cs-feature-videos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .cs-feature-videos video {
+      width: 100%;
+      background: transparent;
+      /* Matches the iPhone corner in the videos (87px radius at 521 x 1078) and trims the black edge */
+      clip-path: inset(0 0.4% round 16.7% / 8.1%);
+    }
+
+    .cs-feature-videos p {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* Design system */
+    .cs-content .cs-ds-group {
+      margin-top: 64px;
+    }
+
+    .cs-content .cs-ds-group--first {
+      margin-top: 16px;
+    }
+
+    .cs-ds-group > p {
+      margin-bottom: 24px;
+    }
+
+    .cs-content .cs-ds-group p {
+      line-height: 1.4;
+    }
+
+    .cs-swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 70px;
+      column-gap: 36px;
+    }
+
+    .cs-swatch {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .cs-swatch-chip {
+      flex: none;
+      width: 64px;
+      height: 64px;
+      outline: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cs-specimens {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 36px;
+    }
+
+    .cs-content .cs-specimen-sample {
+      font-size: 128px;
+      line-height: normal;
+      letter-spacing: 0;
+    }
+
+    .cs-radii {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 36px;
+    }
+
+    .cs-radius-sample {
+      width: 88px;
+      height: 88px;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .cs-spacings {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 36px;
+    }
+
+    .cs-spacing-sample {
+      height: 8px;
+      background: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .cs-shadows {
+      display: flex;
+      gap: 113px;
+    }
+
+    .cs-shadow-sample {
+      width: 112px;
+      height: 112px;
+      border-radius: 8px;
+      background: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      .cs-layout { column-gap: 48px; }
+      .cs-swatches { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+      .cs-specimens { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+      .cs-radii { grid-template-columns: repeat(3, 1fr); row-gap: 48px; }
+      .cs-spacings { grid-template-columns: repeat(4, 1fr); row-gap: 32px; }
+      .cs-shadows { flex-wrap: wrap; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .cs-demo { margin: 0 24px 48px 24px; }
+
+      /* Hide sidenav, content takes full width */
+      .cs-layout { grid-template-columns: 1fr; margin: 0 24px; }
+      .cs-layout > nav { display: none; }
+      .cs-content { gap: 48px; }
+
+      .cs-stats { grid-template-columns: 1fr; row-gap: 24px; }
+      .cs-feature-videos { grid-template-columns: 1fr; row-gap: 24px; }
+
+      /* Stack storyboards vertically */
+      .cs-content .cs-storyboard { flex-direction: column; gap: 8px; }
+      .cs-storyboard .cs-avatar { width: 88px; }
+      .cs-storyboard-frame { flex: none; width: 100%; aspect-ratio: auto; padding: 8px 0; }
+      .cs-storyboard-frame p { max-width: 240px; }
+      .cs-storyboard-arrow { transform: rotate(90deg); }
+      .cs-content .cs-storyboard + .cs-storyboard { margin-top: 48px; }
+
+      .cs-swatches { grid-template-columns: 1fr; row-gap: 24px; }
+      .cs-content .cs-specimen-sample { font-size: 96px; }
+      .cs-radii,
+      .cs-spacings { grid-template-columns: repeat(2, 1fr); }
+    }
