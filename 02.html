@@ -61,7 +61,7 @@
 
   <main class="project-page">
 
-   <!-- Back to work -->
+    <!-- Back to work -->
     <a class="back-link" href="work.html">
       <svg viewBox="0 0 12 12"><line x1="10" y1="6" x2="2" y2="6"/><polyline points="5,3 2,6 5,9"/></svg>
       All Work
@@ -80,282 +80,257 @@
 
     <hr class="project-divider">
 
-    <!-- Hero image -->
-    <div class="project-hero">
-            <img src="artwork/SPOTIFY SCOPES/SCOPES_01.jpg">
+    <div class="project-video cs-demo" id="demonstrationVideo">
+      <video class="hero-video" src="artwork/SPOTIFY SCOPES/Spotify_Scopes_Demo.mp4" controls preload="metadata" playsinline aria-label="Spotify Scopes demonstration"></video>
     </div>
 
-    <!-- Description + sidebar -->
-    <div class="project-body">
-      <div class="project-description">
-        <p>Spotify Scopes is a hypothetical feature for Spotify that allows users to create and share audio visualizers
-          to play along with their favorite music. The feature centers around the "Creator Studio," where the user can adjust
-          different parameters such as color, shape and beat sensitivity to create their own audio-visual experience.
-        </p>
-      </div>
-        
-      <aside class="project-sidebar">
+    <div class="cs-layout">
+      <nav aria-label="Case study sections">
+        <ul class="cs-sidenav">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#conceptSketches">Concept &amp; Sketches</a></li>
+          <li><a href="#userPersonas">User Personas</a></li>
+          <li><a href="#wireframes">Wireframes</a></li>
+          <li><a href="#prototype">Prototype</a></li>
+          <li><a href="#demonstration">Demonstration</a></li>
+        </ul>
+      </nav>
+
+      <div class="cs-content">
+
+        <!-- Title Block -->
         <div>
-          <p class="sidebar-block-label">Disciplines</p>
-          <p class="sidebar-block-value">UI/UX<br>Creative Coding</p>
+          <p class="bodycopy-heading">UI/UX Case Study</p>
+          <h2 class="cs-title">Spotify Scopes</h2>
         </div>
-        <div>
-          <p class="sidebar-block-label">Tools</p>
-          <p class="sidebar-block-value">Figma<br>HTML<br>CSS<br>Javascript</p>
-        </div>
-      </aside>
-    </div>
 
-    <!-- Demonstration -->
-    <section class="demonstration-section">
-      <p class="demonstration-label">Demonstration</p>
-      <div class="project-video">
-        <video
-          loop
-          playsinline
-          controls
-          preload="auto"
-          class="hero-video">
-          <source src="artwork/SPOTIFY SCOPES/SCOPES_01.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+        <!-- Background -->
+        <section id="background">
+          <h2 class="subheading">Background</h2>
+          <p>Spotify Scopes is a hypothetical feature for Spotify that allows users to create and share audio visualizers to play along with their favorite music. The feature centers around the "Creator Studio," where the user can adjust different parameters such as color, shape and beat sensitivity to create their own audio-visual experience. For this project, I was tasked to create a new feature for a Spotify that made the user’s experience more personalized. This case study is an exploration of how Spotify could add a visual dimension to its current listening experience.</p>
+        </section>
 
-    <!-- Key Features -->
-    <section class="features-section">
-      <p class="features-label">Key Features</p>
-      <div class="video-grid">
+        <!-- The Problem -->
+        <section id="problem">
+          <h2 class="subheading">The Problem</h2>
+          <p>Spotify has features that allow users to personalize their listening experience and make it more interactive. These features include Spotify Jam, prompted playlists and Talk to Spotify. Despite coming out with these experimental features, Spotify has no native way to visually immerse the user in their listening experience. Spotify currently has two audio/visual features, however, they lack interactivity and could be pushed further:</p>
+          <ul>
+            <li>Spotify Canvas: A short looping animation that plays along with the music.</li>
+            <li>Moving album art: a brief 1-2 second animated version of the album cover.</li>
+          </ul>
+        </section>
 
-        <div class="grid-item-thirds">
-          <p>Create your audio visualizer.</p>
-          <div class="video-frame">
-            <video autoplay muted loop playsinline preload="auto">
-              <source src="artwork/SPOTIFY SCOPES/SCOPES_02.mov" type="video/mp4">
-            </video>
+        <!-- Research -->
+        <section id="research" class="cs-loose">
+          <h2 class="subheading">Research</h2>
+          <p>I began by researching different ways digital audio and computer visuals have been used to create a more immersive listening experience. The first example that came to mind was the Planetarium at Boston’s Museum of science. The Planetarium is a large dome structure with reclined seats and a screen covering the ceiling. They regularly host immersive science-related viewing experiences and musical laser light shows. I was particularly inspired by the Pink Floyd laser light shows as I have attended several of them. Most Saturdays at 9pm, they play Dark Side of the Moon or The Wall to an interpretive laser show. Although the scale of this experience couldn’t be replicated with a smartphone app, I wondered how I could achieve a similar level of immersion on a smaller scale.</p>
+          <div class="cs-image-pair">
+            <figure>
+              <img src="artwork/SPOTIFY SCOPES/LaserLight_01.jpg" alt="A laser prism with a rainbow beam, from the Dark Side of the Moon show" width="1920" height="1080" loading="lazy">
+              <figcaption>The Planetarium’s Dark Side of the Moon laser light show.</figcaption>
+            </figure>
+            <figure>
+              <img src="artwork/SPOTIFY SCOPES/LaserLight_02.jpg" alt="Purple streaks of light across the Planetarium dome above its seats" width="1200" height="675" loading="lazy">
+              <figcaption>The Planetarium’s Prince experience.</figcaption>
+            </figure>
           </div>
-        </div>
-
-        <div class="grid-item-thirds">
-          <p>Save and publish your visualizer.</p>
-          <div class="video-frame">
-            <video autoplay muted loop playsinline preload="auto">
-              <source src="artwork/SPOTIFY SCOPES/SCOPES_03.mov" type="video/mp4">
-            </video>
+          <p>With scale being my primary issue, I decided to lean into immersive experiences on personal devices. The most famous example of this is the Windows Media Player (WMP) Audio Visualizer. The WMP audio visualizer feature was introduced in Windows Millennium in the July 2000 and sadly discontinued with the release of Windows 11. Over the course of its life, users made skins for the interface to create their own audio/visual experiences and built a community surrounding the program. Although it was discontinued, there is still a surviving network of hobbyist developers who create skins for WMP on older versions of windows. With the end of windows media player, we lost a dynamic and expressive means of customizing our listening experience.</p>
+          <div class="cs-image-pair">
+            <figure>
+              <img src="artwork/SPOTIFY SCOPES/WMPskins_01.jpg" alt="A collection of custom Windows Media Player skins" width="1280" height="1024" loading="lazy">
+              <figcaption>A collection of custom WMP skins.</figcaption>
+            </figure>
+            <figure>
+              <img src="artwork/SPOTIFY SCOPES/WMPskins_02.jpg" alt="A green custom Windows Media Player skin with an audio visualizer" width="1242" height="923" loading="lazy">
+              <figcaption>Custom WMP skin with Audio Visualizer.</figcaption>
+            </figure>
           </div>
-        </div>
+          <p>I was fascinated by the idea of being able to “see the music,” which led me to research oscilloscopes. An oscilloscope is an electrical instrument that visualizes voltage signals in varying waveforms. Since digital audio is converted into an electrical signal before a person can hear it, an oscilloscope can also be used to visualize sound waves. This is when I began playing with the idea of naming this feature something inspired by oscilloscopes.</p>
+          <img src="artwork/SPOTIFY SCOPES/oscilloscope_02.jpeg" alt="An oscilloscope displaying a waveform on its screen" width="2728" height="1440" loading="lazy" style="width: 931px; margin-inline: auto;">
+          <p>The research I conducted on immersive audio/visual experiences led me to reframe the question that would guide the rest of the project. I needed to find a way to replicate the immersive nature of the Planetarium’s laser light shows at the scale and with the same level of personalization as Windows Media player.</p>
+          <blockquote class="cs-question">How can audio and visuals be combined to create a immersive and personalized listening experience on a personal device?</blockquote>
+        </section>
 
-        <div class="grid-item-thirds">
-          <p>Play your visualizer and screencast.</p>
-          <div class="video-frame">
-            <video autoplay muted loop playsinline preload="auto">
-              <source src="artwork/SPOTIFY SCOPES/SCOPES_04.mov" type="video/mp4">
-            </video>
-          </div>
-        </div>
+        <!-- Concept & Sketches -->
+        <section id="conceptSketches" class="cs-loose">
+          <h2 class="subheading">Concept &amp; Sketches</h2>
+          <p>From my research, I concluded that this new Spotify feature should allow users to play audio visualizers along with their music that they could cast to larger screens via bluetooth. I would name the feature “Spotify Scopes” as an homage to the oscilloscope. the tool that creates a graphic representation of something invisible. Before anything, I needed to determine how the feature integrate into Spotify’s current UI. I created sketches to figure out what this would look like.</p>
+          <img src="artwork/SPOTIFY SCOPES/sketches_01.jpg" alt="Sketches of how Spotify Scopes fits into Spotify’s current UI" width="3518" height="1445" loading="lazy">
+          <p>Because this is an experimental feature, it wouldn’t be front and center. I decided that the user would access Spotify Scopes through the pill menu on the “Your Library” tab and be able to chose between a variety of presets. While the concept was beginning to take shape, it still lacked an important aspect: customization. I wondered how someone would customize a visualizer in the first place. What parameters would they adjust? Could they change its colors? I determined that the only way to find out was to make one myself.</p>
+          <p>With my limited knowledge of javascript, I dove in head first into web audio visualizers. Through countless hours of YouTube tutorials and scavenging Stack Overflow, I discovered the Web Audio API. This would be the backbone of my project. The Web Audio API allows you to analyze and manipulate audio in the browser through different nodes. I specifically used the AnalyserNode to extract frequency data from an MP3 file and map it onto an HTML canvas. The following is the structure of my code:</p>
+          <ol class="cs-storyboard cs-flow">
+            <li class="cs-storyboard-frame"><p>Audio Context is created. The audio element becomes a source.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>The source connects to an AnalyserNode which extracts the frequency data.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>The data is stored in an Unit8Array.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>requestAnimation<wbr>Frame() repeatedly updates the data based on input from the source.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>HTML canvas draws shapes based on frequency values.</p></li>
+          </ol>
+          <iframe class="cs-embed" src="https://ff1905617.github.io/audioviz/" title="Hand-coded audio visualizer" loading="lazy" allow="autoplay; microphone" allowfullscreen></iframe>
+          <p>After building my own audio visualizer from scratch, I had a better idea of how it could be customized. Users should be able to adjust parameters such as color, element count, shape, beat sensitivity, etc. I determined that there needed to be a “creator studio” with a GUI for adjusting said parameters, so I sketched it out.</p>
+          <img src="artwork/SPOTIFY SCOPES/sketches_02.jpg" alt="Sketches of the Creator Studio interface" width="3561" height="1579" loading="lazy">
+        </section>
 
-      </div>
-    </section>
+        <!-- User Personas -->
+        <section id="userPersonas" class="cs-loose">
+          <h2 class="subheading">User Personas</h2>
+          <p>Who would use a feature like Spotify Scopes? I certainly would, but that isn’t enough. My next task was to create two potential user personas so that I could determine why they would use this feature in the first place and how they would navigate it. I determined that my two personas would fit the following profiles:</p>
+          <ul>
+            <li>People of all ages who are looking for new, exciting ways to experience music. Whether it be in a party setting or around the house by themselves.</li>
+            <li>People who are otherwise interested in generative art and experimenting with environmental design. This includes DJs, event planners, musicians and everyone in between.</li>
+          </ul>
 
-    <!-- Web Audio API -->
-    <section class="webaudio-section">
-      <p class="webaudio-label">Web Audio API</p>
-      <p class="bodycopy">To prototype the audio-reactive behavior behind Spotify Scopes, I built a functioning visualizer using the Web Audio API. It analyzes live audio in the browser and translates frequency and amplitude data into the shape, color and motion parameters explored in the Creator Studio. Interact with the live build below.</p>
-      <div class="webaudio-frame-wrap">
-        <iframe
-          class="webaudio-frame"
-          src="https://ff1905617.github.io/audioviz/"
-          title="Spotify Scopes Web Audio API prototype"
-          loading="lazy"
-          allow="autoplay; microphone"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section class="research-section">
-      <p class="research-label">Research</p>
-
-      <!-- User Personas -->
-      <div class="personas-section">
-        <p class="personas-heading">User Personas</p>
-        <div class="personas-grid">
-          <div class="persona-card">
-            <img class="persona-photo" src="images/SCOPES_persona_01.png" alt="Harold, 29, Electrician">
-            <div class="persona-info">
-              <p class="persona-name">Harold, 29 &mdash; Electrician</p>
-              <p class="persona-desc">
-                Harold is a 29 year old electrician.<br>
-                He works hard during the week and gets together with his friends on the weekend for wings and beer.<br>
-                They take turns connecting Harold&rsquo;s smart TV, playing music and music videos.<br>
-                This weekend get-together has been a tradition for Harold and his friends for many years.
-              </p>
+          <article class="cs-persona">
+            <div class="cs-badge">
+              <img class="cs-avatar" src="images/SCOPES_persona_01.png" alt="Harold">
+              <p>Harold, 29 — Electrician</p>
             </div>
-          </div>
-          <div class="persona-card">
-            <img class="persona-photo" src="images/SCOPES_persona_02.png" alt="Pete, 24, Underground DJ">
-            <div class="persona-info">
-              <p class="persona-name">Pete, 24 &mdash; Underground DJ</p>
-              <p class="persona-desc">
-                Pete is a 24 year old night club bouncer and underground DJ.<br>
-                He works from 5:00pm to 1:00am at the night club and carts his sound equipment to basement parties afterwards.<br>
-                He is relatively new to DJ-ing and doesn&rsquo;t have top of the line equipment.<br>
-                He is interested in learning how to use generative art for visuals during his DJ sets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Current Negative Flows -->
-      <div class="flow-section">
-        <p class="flow-heading">Current Negative Flows</p>
-        <div class="flow-grid">
-          <div class="flow-card">
-            <p class="flow-user">Harold</p>
-            <ol class="flow-steps">
+            <p>Harold is a 29 year old electrician. He works hard during the week and gets together with his friends on the weekend for wings and beer.<br>They take turns connecting Harold’s smart TV, playing music and music videos.<br>This weekend get-together has been a tradition for Harold and his friends for many years.</p>
+            <p>Current Negative User Flow:</p>
+            <ol>
               <li>Harold and his friends are watching music videos and socializing but are starting to get bored of watching the same videos.</li>
-              <li>While they enjoy each other&rsquo;s company, they want to find something new to do together.</li>
+              <li>While they enjoy each other’s company, they want to find something new to do together.</li>
               <li>The group is already tired from the work week.</li>
-              <li>Some of Harold&rsquo;s friends start scrolling on their phones.</li>
+              <li>Some of Harold’s friends start scrolling on their phones.</li>
             </ol>
-            <div class="pain-points">
-              <p class="pain-points-label">Pain Points</p>
-              <ul class="pain-points-list">
-                <li>Harold and his friends are bored of watching the same videos.</li>
-                <li>They are already tired from the week and are starting to get sleepy.</li>
-                <li>They want something new to do together.</li>
-                <li>They start looking for mindless stimulation on their phones.</li>
-              </ul>
+            <p>Pain Points:</p>
+            <ul>
+              <li>Harold and his friends are bored of watching the same videos.</li>
+              <li>They are already tired from the week and are starting to get sleepy.</li>
+              <li>They want something new to do together.</li>
+              <li>They start looking for mindless stimulation on their phones.</li>
+            </ul>
+          </article>
+
+          <article class="cs-persona">
+            <div class="cs-badge">
+              <img class="cs-avatar" src="images/SCOPES_persona_02.png" alt="Pete">
+              <p>Pete, 24 — Underground DJ</p>
             </div>
-          </div>
-          <div class="flow-card">
-            <p class="flow-user">Pete</p>
-            <ol class="flow-steps">
+            <p>Pete is a 24 year old night club bouncer and underground DJ. He works from 5:00pm to 1:00am at the night club and carts his sound equipment to basement parties afterwards. He is relatively new to DJ-ing and doesn’t have top of the line equipment. He is interested in learning how to use generative art for visuals during his DJ sets.</p>
+            <p>Current Negative User Flow:</p>
+            <ol>
               <li>Pete is looking for different ways to improve his DJ set in terms of visuals. He currently has an old strobe light and an overhead projector.</li>
               <li>He has been researching different ways to incorporate visuals into his set and has discovered generative art.</li>
-              <li>In order to make generative art, he has to learn how to code. With his work schedule as a bouncer, it&rsquo;s hard for him to find time to sit down and teach himself.</li>
-              <li>Pete usually ends up sticking to what he already has and doesn&rsquo;t branch out.</li>
+              <li>In order to make generative art, he has to learn how to code. With his work schedule as a bouncer, it’s hard for him to find time to sit down and teach himself.</li>
+              <li>Pete usually ends up sticking to what he already has and doesn’t branch out.</li>
             </ol>
-            <div class="pain-points">
-              <p class="pain-points-label">Pain Points</p>
-              <ul class="pain-points-list">
-                <li>Pete&rsquo;s equipment is limited.</li>
-                <li>He wants to learn how to make generative art but doesn&rsquo;t know how to code.</li>
-                <li>Pete can&rsquo;t spend money on expensive softwares or classes.</li>
-                <li>His sets are limited in terms of visuals.</li>
-              </ul>
-            </div>
+            <p>Pain Points:</p>
+            <ul>
+              <li>Pete’s equipment is limited.</li>
+              <li>He wants to learn how to make generative art but doesn’t know how to code.</li>
+              <li>Pete can’t spend money on expensive softwares or classes.</li>
+              <li>His sets are limited in terms of visuals.</li>
+            </ul>
+          </article>
+
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="images/SCOPES_persona_01.png" alt="Harold"></li>
+            <li class="cs-storyboard-frame"><p>Harold opens Spotify Scopes at his party.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He connects his phone to the TV via Bluetooth.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He launches a visualizer to their playlist.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>Harold and his friends try different visualizers.</p></li>
+          </ol>
+          <ol class="cs-storyboard">
+            <li class="cs-storyboard-avatar"><img class="cs-avatar" src="images/SCOPES_persona_02.png" alt="Pete"></li>
+            <li class="cs-storyboard-frame"><p>Pete opens Spotify Scopes before a show.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He opens the creator studio and adjusts different parameters.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He creates several visualizers and saves them.</p></li>
+            <li class="cs-storyboard-arrow" aria-hidden="true">→</li>
+            <li class="cs-storyboard-frame"><p>He pairs his phone with a projector and tests them for his next show.</p></li>
+          </ol>
+        </section>
+
+        <!-- Wireframes -->
+        <section id="wireframes" class="cs-loose">
+          <h2 class="subheading">Wireframes</h2>
+          <p>After creating my two user flows, I started building wireframes that would accommodate the needs of both users. I built out my wireframes using the Figma Spotify UI kit to ensure that my work would be consistent with Spotify’s design system.</p>
+          <img src="artwork/SPOTIFY SCOPES/SCOPES_05.png" alt="Spotify Scopes wireframes" width="1908" height="1080" loading="lazy">
+        </section>
+
+        <!-- Prototype -->
+        <section id="prototype" class="cs-loose">
+          <h2 class="subheading">Prototype</h2>
+          <p>Using the Figma MCP server and my previous hand-coded audio visualizer, I built an interactive Spotify Scopes Prototype. Try it out below or go to the page <a class="cs-text-link" href="https://ff1905617.github.io/spotify-scopes-interactive-prototype/" target="_blank" rel="noopener">here</a>.</p>
+          <div class="cs-embed-fit">
+            <iframe src="https://ff1905617.github.io/spotify-scopes-interactive-prototype/" title="Spotify Scopes interactive prototype" loading="lazy" allow="autoplay; microphone" allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Happy Path -->
-      <div class="happy-path-section">
-        <p class="happy-path-section-heading">Happy Path</p>
+        <!-- Demonstration -->
+        <section id="demonstration">
+          <h2 class="subheading">Demonstration</h2>
+          <p>Using the interactive Prototype I created, I also built out a demonstration video. Go <a class="cs-text-link" href="#demonstrationVideo">back to the top</a> of the page to view it. Thank you for reading my case study!</p>
+        </section>
 
-        <div class="happy-path">
-          <p class="happy-path-label">Harold</p>
-          <div class="happy-path-steps happy-path-steps--4">
-            <div class="happy-path-step">
-              <p class="step-number">01</p>
-              <p class="step-title">Discover Spotify Scopes</p>
-              <p class="step-desc">Harold discovers Spotify Scopes through social media and decides to try it out at his next weekend get-together.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">02</p>
-              <p class="step-title">Connect &amp; Open</p>
-              <p class="step-desc">When the energy starts to dwindle, Harold connects his phone to the TV, opening Spotify Scopes.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">03</p>
-              <p class="step-title">Browse Visualizers</p>
-              <p class="step-desc">The group is intrigued by the selection of visuals and starts requesting music to play along with them.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">04</p>
-              <p class="step-title">Experiment Together</p>
-              <p class="step-desc">For the rest of the night, Harold and his friends are experimenting with different visualizers and having fun.</p>
-            </div>
+        <!-- Bottom Nav -->
+        <footer class="cs-footer">
+          <nav class="cs-page-nav" aria-label="Projects">
+            <a class="prev" href="01.html">
+              <svg viewBox="0 0 33 15" aria-hidden="true"><line x1="32" y1="7.5" x2="2" y2="7.5"/><polyline points="8,1.5 2,7.5 8,13.5"/></svg>
+              <span><strong>Previous:</strong> Hellbrook Brewing Co.</span>
+            </a>
+            <a class="next" href="03.html">
+              <span><strong>Next:</strong> Oddgredients</span>
+              <svg viewBox="0 0 33 15" aria-hidden="true"><line x1="1" y1="7.5" x2="31" y2="7.5"/><polyline points="25,1.5 31,7.5 25,13.5"/></svg>
+            </a>
+          </nav>
+          <hr>
+          <div class="cs-footer-info">
+            <p>© Francis Fitzgerald, 2026</p>
+            <ul>
+              <li><a href="https://www.instagram.com/ffitz.design/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/in/francis-fitzgerald-ba9a5022b" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
           </div>
-        </div>
+        </footer>
 
-        <div class="happy-path">
-          <p class="happy-path-label">Pete</p>
-          <div class="happy-path-steps happy-path-steps--4">
-            <div class="happy-path-step">
-              <p class="step-number">01</p>
-              <p class="step-title">Discover Spotify Scopes</p>
-              <p class="step-desc">While researching generative art, Pete discovers Spotify Scopes.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">02</p>
-              <p class="step-title">Open Creator Studio</p>
-              <p class="step-desc">He decides to try it out. Pete opens the creator studio and begins to mess around with it.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">03</p>
-              <p class="step-title">Create Visualizers</p>
-              <p class="step-desc">He creates a couple visualizers and decides that he will use them in his next DJ set along with his projector.</p>
-            </div>
-            <div class="happy-path-step">
-              <p class="step-number">04</p>
-              <p class="step-title">Build His Set</p>
-              <p class="step-desc">Pete creates four different visualizers for different parts of his set to use at his next gig.</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-
-    <!-- Sketches & Wireframes -->
-    <section class="sketches-section">
-      <p class="sketches-heading">Sketches &amp; Wireframes</p>
-
-      <div class="wireframes-block">
-        <img src="artwork/SPOTIFY SCOPES/SCOPES_06.png" alt="Spotify Scopes wireframe 6">
-      </div>
-
-      <div class="wireframes-block">
-        <img src="artwork/SPOTIFY SCOPES/SCOPES_05.png" alt="Spotify Scopes wireframe 5">
-      </div>
-    </section>
-
-
-    <!-- Additional images -->
-    <!--<div class="project-images">
-      <div class="project-img-block">
-        <img src="project-detail-1.jpg" alt="Project detail"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
-      </div>
-      <div class="project-img-block">
-        <img src="project-detail-2.jpg" alt="Project detail"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
-      </div>
-      <div class="project-img-block">
-        <img src="project-detail-3.jpg" alt="Project detail"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
-      </div>
-      <div class="project-img-block">
-        <img src="project-detail-4.jpg" alt="Project detail"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-block-placeholder\'></div>'">
-      </div>
-    </div>-->
-
-    <!-- Next project -->
-    <a class="next-project" href="03.html">
-      <div>
-        <p class="next-label">Next Project</p>
-        <p class="next-title">Oddgredients</p>
-      </div>
-      <div class="next-arrow">
-        <svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><polyline points="7,3 10,6 7,9"/></svg>
-      </div>
-    </a>
+    </div>
 
   </main>
 
   <script src="nav.js"></script>
+  <script>
+    /* Scales the fixed-size prototype embed so the whole page inside stays visible */
+    (function () {
+      var EMBED_MIN_WIDTH = 420;
+      var EMBED_HEIGHT = 870;
+      var EMBED_NARROW_HEIGHT = 803; /* The prototype shrinks itself at 820px wide and below */
+      var EMBED_NARROW_WIDTH = 820;
+      var EMBED_MIN_SCALE = 0.6;
+      var STICKY_NAV_SPACE = 112;
+
+      function fitEmbed(box) {
+        var frame = box.querySelector('iframe');
+        var boxWidth = box.clientWidth;
+        var fitsWidth = boxWidth / EMBED_MIN_WIDTH;
+        var fitsHeight = (window.innerHeight - STICKY_NAV_SPACE) / EMBED_HEIGHT;
+        var scale = Math.min(1, fitsWidth, Math.max(EMBED_MIN_SCALE, fitsHeight));
+        var frameWidth = boxWidth / scale;
+        var visibleHeight = frameWidth <= EMBED_NARROW_WIDTH ? EMBED_NARROW_HEIGHT : EMBED_HEIGHT;
+
+        frame.style.width = frameWidth + 'px';
+        frame.style.transform = 'scale(' + scale + ')';
+        box.style.height = visibleHeight * scale + 'px';
+      }
+
+      document.querySelectorAll('.cs-embed-fit').forEach(function (box) {
+        fitEmbed(box);
+        if (window.ResizeObserver) new ResizeObserver(function () { fitEmbed(box); }).observe(box);
+        window.addEventListener('resize', function () { fitEmbed(box); });
+      });
+    })();
+  </script>
 </body>
 </html>

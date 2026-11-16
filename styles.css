@@ -2047,6 +2047,159 @@
       margin-bottom: 16px;
     }
 
+    /* ── Spotify Scopes case study additions (02.html) ── */
+
+    /* Sections with more room around images and embeds */
+    .cs-content section.cs-loose > * + * {
+      margin-top: 24px;
+    }
+
+    .cs-content section.cs-loose > .subheading + * {
+      margin-top: 16px;
+    }
+
+    /* Side-by-side captioned images */
+    .cs-image-pair {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+    }
+
+    .cs-image-pair img {
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+    }
+
+    .cs-image-pair figcaption {
+      margin-top: 16px;
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      line-height: 1.75;
+      color: #ffffff;
+    }
+
+    /* Text-only flow diagram built on the storyboard */
+    .cs-content .cs-flow {
+      justify-content: center;
+    }
+
+    .cs-flow .cs-storyboard-frame {
+      flex-basis: 166px;
+      aspect-ratio: auto;
+    }
+
+    .cs-flow .cs-storyboard-frame p {
+      max-width: none;
+    }
+
+    /* Embedded live pages */
+    .cs-embed {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1314 / 847;
+      min-height: 480px;
+      border: 0;
+      background: #000000;
+    }
+
+    /* Embedded fixed-size page, scaled to fit by the script in 02.html */
+    .cs-embed-fit {
+      height: 870px;
+      overflow: hidden;
+      background: #000000;
+    }
+
+    .cs-embed-fit iframe {
+      display: block;
+      width: 100%;
+      height: 870px;
+      border: 0;
+      transform-origin: 0 0;
+    }
+
+    /* Links inside body copy */
+    .cs-text-link {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Previous / next + footer */
+    .cs-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .cs-page-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cs-page-nav a {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Acumin-Variable', sans-serif;
+      font-variation-settings: 'wght' 300, 'wdth' 67.5, 'slnt' 0;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .cs-page-nav a:hover {
+      opacity: 0.6;
+    }
+
+    .cs-page-nav .next {
+      margin-left: auto;
+    }
+
+    .cs-page-nav strong {
+      font-weight: normal;
+      font-variation-settings: 'wght' 600, 'wdth' 67.5, 'slnt' 0;
+    }
+
+    .cs-page-nav svg {
+      flex: none;
+      width: 32px;
+      height: 15px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 1.25;
+    }
+
+    .cs-footer hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cs-footer-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .cs-content .cs-footer-info ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cs-footer-info a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
     @media (max-width: 1024px) {
       .cs-layout { column-gap: 48px; }
       .cs-swatches { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
@@ -2079,4 +2232,20 @@
       .cs-content .cs-specimen-sample { font-size: 96px; }
       .cs-radii,
       .cs-spacings { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Stack the text-only flow before its columns get too narrow */
+    @media (max-width: 1360px) {
+      .cs-content .cs-flow { flex-direction: column; gap: 8px; }
+      .cs-flow .cs-storyboard-frame { flex: none; width: 100%; }
+      .cs-flow .cs-storyboard-frame p { max-width: 320px; }
+      .cs-flow .cs-storyboard-arrow { transform: rotate(90deg); }
+    }
+
+    @media (max-width: 768px) {
+      .cs-image-pair { grid-template-columns: 1fr; row-gap: 24px; }
+
+      /* Stack previous / next links */
+      .cs-page-nav { flex-direction: column; align-items: stretch; gap: 16px; }
+      .cs-page-nav .next { justify-content: flex-end; }
     }
